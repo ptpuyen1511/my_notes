@@ -1,4 +1,5 @@
-# notes_while_reading
-Store my notes which are taken while reading
+# My notes
 
-Notes are stored in Issues tab (because I can use label for managing notes)
+This repo is used to store my notes which are taken while reading.
+
+Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick notes I take on my mobile phone).
