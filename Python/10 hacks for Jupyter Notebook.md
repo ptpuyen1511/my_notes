@@ -82,6 +82,23 @@ Follow the below steps:
 * cumtime –  the total time spent in this and all subfunctions (from invocation till exit)
 * percall – the quotient of cumtime divided by primitive calls
 
+We can use line-profiler library to get execution time for each code line.
+
+* How to import magic function:
+```python
+!pip install line-profiler
+%load_ext line_profiler
+```
+
+* How to use:
+```python
+# %lprun -f [function to profile] [execution trigger]
+# [function to profile]: test_func
+# [execution trigger]: test_func(param1=1, param2=2)
+
+%lprun -f test_func test_func(param1=1, param2=2)
+```
+
 ### Hack 10: %%heat – Heatmap over Code
 
 > It’s one of the easiest ways to visualize the profiling of your code. By using %%heat, you’ll get an output of your code in the form of a heatmap. This will help you recognize the most time-consuming statements and help you optimize it.
