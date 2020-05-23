@@ -95,3 +95,54 @@ Using **membership operator**. There are two membership operator:
 'h' in dict_a # return False
 'h' not in dict_a # return True
 ```
+
+### Copy
+
+> To copy a dictionary, we can simply use the **dict.copy()** method. This method returns a **shallow copy** of the dictionary. We have to be careful with shallow copies, since if your dictionary contains another **container-objects** like lists, tuples, or sets, they will be referenced again and not duplicated.
+
+```python
+dict_b = dict_a.copy()
+
+# Problem
+# dictionary with students heights and weights
+students_weights = {'Marco': [173, 70], 'Luis': [184, 80], 'Andrea': [168, 57]}
+
+# create a shallow copy
+students_weights_2 = students_weights.copy()
+
+# modify the height of luis in the shallow copy
+students_weights_2['Luis'][0] = 180
+
+# the modification in students_weights_2 is observed in students_weights
+# since the list containing the weight and height is referenced and not duplicated
+print(students_weights)
+# {'Marco': [173, 70], 'Luis': [180, 80], 'Andrea': [168, 57]}
+```
+
+> To avoid this problem, we can create a deep copy using copy.deepcopy(x) function (defined in the copy module) as follows:
+
+```python
+import copy
+
+# dictionary with students heights and weights
+students_weights = {'Marco': [173, 70], 'Luis': [184, 80], 'Andrea': [168, 57]}
+
+# create a deep copy
+students_weights_2 = copy.deepcopy(students_weights)
+
+# modify the height of luis in the shallow copy
+students_weights_2['Luis'][0] = 180
+
+# the modification in students_weights_2 is NOT observed in students_weights
+# since we are working with a deep copy
+
+print(students_weights)
+# {'Marco': [173, 70], 'Luis': [184, 80], 'Andrea': [168, 57]}
+
+print(students_weights_2)
+# {'Marco': [173, 70], 'Luis': [180, 80], 'Andrea': [168, 57]}
+```
+
+> The difference between shallow copies and deep copies is only relevant when the dictionary contains other objects like lists, since those objects will be referenced instead of duplicated (shallow copy). To create a fully independent clone of the original dictionary, we have to make a deep copy.
+>
+> It is important to bear in mind that the = operator does not make a copy of the dictionary. It is just another name to refer to the same dictionary, meaning any modification to the new dictionary is reflected in the original one.
