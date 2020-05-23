@@ -85,6 +85,7 @@ dict_a.pop('g') # key does not exist but default value is NOT provided --> raise
 ### Check if element exists
 
 Using **membership operator**. There are two membership operator:
+
 - `in`
 - `not in`
 
