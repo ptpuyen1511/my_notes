@@ -81,3 +81,5 @@ dict_a.pop('a') # key exists --> remove
 dict_a.pop('g', 'Not found') # key does not exists but default value is provied, so error dont raise
 dict_a.pop('g') # key does not exist but default value is NOT provided --> raise KeyError
 ```
+
+### Check if element exists
