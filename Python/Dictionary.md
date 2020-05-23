@@ -49,3 +49,35 @@ dict_a.get('a') # ok
 dict_a.get('d') # return None (no error raises)
 dict_a.get('d', 'Not found') # return 'Not found' ('Not found' is default value when dict can find key)
 ```
+
+### Insert elements
+
+```python
+dict_a['d'] = 4 # dict will auto update this key if key is undefined
+
+# Using .update()
+dict_a.update({'d': 4, 'e': 5}) # using another dict
+dict_a.update('d'=4, 'e'=5) # using keyword arguments
+dict_a.update([('d', 4), ('e', 5)]) # using a list of tuple
+```
+
+### Change (update) elements
+
+```python
+dict_a['a'] = 0 # using key
+
+dict_a.update({'a': 0, 'b': 1}) # using update() because update() will overwrites existing keys
+```
+
+### Remove elements
+
+```python
+# Using del
+del dict_a['a'] # using del to remove element has key 'a'
+del dict_a['g'] # KeyError ('cause 'g' does not exists)
+
+# Using pop()
+dict_a.pop('a') # key exists --> remove
+dict_a.pop('g', 'Not found') # key does not exists but default value is provied, so error dont raise
+dict_a.pop('g') # key does not exist but default value is NOT provided --> raise KeyError
+```
