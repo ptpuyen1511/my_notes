@@ -8,9 +8,7 @@ This note is about Git Basics from the book **Pro Git**
 
 Scott Chacon and Ben Straub
 
-## Key Takeaways
-
-### Intro Version Control Systems
+## Intro Version Control Systems
 
 * Centralized Version Control Systems
   
@@ -23,11 +21,11 @@ Scott Chacon and Ben Straub
   
   * ![dvc](../image/git_basics_dvc.png)
 
-### Intro Git
+## Intro Git
 
 > Git stores and thinks about information much differently than these other systems, even though the user interface is fairly similar, and understanding those differences will help prevent you from becoming confused while using it.
 
-#### Snapshots, Not Differences
+### Snapshots, Not Differences
 
 > The major difference between Git and any other VCS (Subversion and friends included) is the way Git thinks about its data. Conceptually, most other systems store information as a list of file-based changes. These systems (CVS, Subversion, Perforce, Bazaar, and so on) think of the information they keep as a set of files and the changes made to each file over time.
 >
@@ -35,7 +33,7 @@ Scott Chacon and Ben Straub
 
 ![storing_as_snapshots](../image/git_basics_storing_as_snapshots.png)
 
-#### Git Has Integrity
+### Git Has Integrity
 
 > Everything in Git is check-summed before it is stored and is then referred to by that checksum.
 >
@@ -45,7 +43,7 @@ Scott Chacon and Ben Straub
 24b9da6552252987aa493b52f8696cd6d3b00373
 ```
 
-#### The Three States
+### The Three States
 
 Git has three main states that your files can reside in:
 
@@ -54,3 +52,39 @@ Git has three main states that your files can reside in:
 * Staged: means that you have marked a modified file in its current version to go into your next commit snapshot.
 
 ![three_states](../image/git_basics_three_states.png)
+
+## Getting a Git Repository
+
+### Initializing a Repository in an Existing Directory
+
+```git
+git init
+```
+
+> This creates a new subdirectory named .git that contains all your necessary repository files—a Git repository skeleton
+
+### Cloning an Existing Repository
+
+Clone and store with same name in global repo:
+
+```git
+git clone https://github.com/libgits2/libgit2
+```
+
+Clone and store with specified name (mylibgit is new name):
+
+```git
+git clone https://github.com/libgit2/libgit2 mylibgit
+```
+
+## Recording Changes to the Repository
+
+> Each file in your working directory can be in one of two states: tracked or untracked. Tracked files are files that were in the last snapshot; they can be unmodified, modified, or staged. Untracked files are everything else—any files in your working directory that were not in your last snapshot and are not in your staging area.
+
+![lifecycle_status_files](../image/git_basics_lifecycle_of_status_files.png)
+
+### Checking the Status of Files
+
+```git
+git status
+```
