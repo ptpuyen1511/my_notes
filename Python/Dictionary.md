@@ -146,3 +146,60 @@ print(students_weights_2)
 > The difference between shallow copies and deep copies is only relevant when the dictionary contains other objects like lists, since those objects will be referenced instead of duplicated (shallow copy). To create a fully independent clone of the original dictionary, we have to make a deep copy.
 >
 > It is important to bear in mind that the = operator does not make a copy of the dictionary. It is just another name to refer to the same dictionary, meaning any modification to the new dictionary is reflected in the original one.
+
+### Determine the length
+
+```python
+len(dict_a)
+```
+
+### Loop through
+
+#### Iterating through keys
+
+```python
+for key in dict_a:
+    print(key)
+    
+# Or
+for key in dict_a.keys():
+    print(key)
+```
+
+#### Iterating through values
+
+```python
+for value in dict_a.values():
+    print(value)
+```
+
+#### Iterating through items
+
+```python
+for key, value in dict_a.items():
+    print(key, value)
+```
+
+### Dictionary comprehensions
+
+```python
+new_dict = {key: value for key, value in dict_a.items() if value > 2}
+```
+
+### Nested dictionary
+
+> **Nested dictionary** are dictionaries that contain other dictionaries.
+
+```python
+dict_nested = {'A': {'a': 1, 'aa': 2},
+               'B': {'b': 1, 'bb': 2}}            
+# Or
+dict_nested = dict('A'={'a': 1, 'aa': 2},
+                   'B'={'b': 1, 'bb': 2})
+
+# To access
+dict_nested['A']['aa']
+```
+
+### Alternative containers: OrderedDict, defaultdict, and Counter
+
