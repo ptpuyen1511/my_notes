@@ -99,8 +99,10 @@ $ git status
 
 On branch master
 Untracked files:
- (use "git add <file>..." to include in what will be committed)
- README
+  (use "git add <file>..." to include in what will be committed)
+
+    README.md
+
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
@@ -119,10 +121,78 @@ $ git status
 
 On branch master
 Changes to be committed:
- (use "git reset HEAD <file>..." to unstage)
- new file: README
+  (use "git reset HEAD <file>..." to unstage)
+
+    new file: README.md
 ```
 
 > You can tell that it’s staged because it’s under the Changes to be committed heading.
 
 ### Staging Modified Files
+
+After changing the `test.py` file (already tracked), if you run `git status`, you will get something looks like this:
+
+```git
+$ git status
+
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    new file: README.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+    modified: test.py
+```
+
+When the file appears under a section named `Changed but not staged for commit`, means that a file that is tracked has been modified in the working directory but not yet staged.
+
+To stage this `test.py` file, let's run `git add` and then run `git status` again, you get:
+
+```git
+$ git add test.py
+$ git status
+
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    new file: README.md
+    modified: test.py
+```
+
+But suppose you make a new change in `test.py` file and then you run `git status`:
+
+```git
+$ git status
+
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    new file: README.md
+    modified: test.py
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+    modified: test.py
+```
+
+> Now `test.py` is listed as both staged and unstaged. How is that possible? It turns out that Git stages a file exactly as it is when you run the `git add` command. If you commit now, the version of `test.py` as it was when you last ran the `git add` command is how it will go into the commit, not the version of the file as it looks in your working directory when you run `git commit`. If you modify a file after you run `git add`, you have to run `git add` again to stage the latest version of the file:
+
+```git
+$ git add test.py
+$ git status
+
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    new file: README.md
+    modified: test.py
+```
