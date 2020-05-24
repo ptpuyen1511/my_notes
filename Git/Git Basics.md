@@ -196,3 +196,60 @@ Changes to be committed:
     new file: README.md
     modified: test.py
 ```
+
+### Short Status
+
+You can get a short status if you run `git status -s` or `git status --short`:
+
+```git
+$ git status -s
+
+ M README
+MM Rakefile
+A  lib/git.rb
+M  lib/simplegit.rb
+?? LICENSE.txt
+```
+
+`??` for new files that aren't tracked.
+
+`A` for new files that have been added to the staging area.
+
+`M` for modified files.
+
+`MM` for modified, staged and then modifed again (both staged and unstaged).
+
+### Ignoring Files
+
+> Often, you’ll have a class of files that you don’t want Git to automatically add or even show you as being untracked.
+> These are generally automatically generated files such as log files or files produced by your build system.
+> In such cases, you can create a file listing patterns to match them named `.gitignore`. Here is an example `.gitignore` file:
+
+```git
+$ cat .gitignore
+
+*.[oa]
+*~
+```
+
+In first line tells Git to ignore any files ending in ".o" or ".a".
+The second line tells Git to ignore all files that end with a tilde (~).
+
+The rules for the patterns you can put in the `.gitignore` file are as follows:
+
+* Blank lines o lines starting with `#` are ignored.
+* Standard glob patterns work. (Glob patterns are like simplified regular expressions that shells use. Besides, you can also use two asterisks to match nested directories; `a/**/z` would match
+`a/z`, `a/b/z`, `a/b/c/z`, and so on)
+* You can end patterns with a forward slash (/) to specify a directory.
+* You can negate a pattern by starting it with an exclamation point (!).
+
+Here is another example of `.gitignore` file:
+
+```git
+# a comment - this is ignored
+*.a       # no .a files
+!lib.a    # but do track lib.a, even though you're ignoring .a files above
+/TODO     # only ignore the root TODO file, not subdir/TODO
+build/    # ignore all files in the build/ directory
+doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt
+```
