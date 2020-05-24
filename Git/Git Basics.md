@@ -53,6 +53,56 @@ Git has three main states that your files can reside in:
 
 ![three_states](../image/git_basics_three_states.png)
 
+## First-Time Git Setup
+
+### Your Identity
+
+```git
+git config --global user.name "Your Name"
+
+git config --global user.email your_email@email.com
+```
+
+### Your Editor
+
+Git uses Vim for default editor, but you can change to other editor:
+
+```git
+git config --global core.editor emacs
+```
+
+### Checking Your Settings
+
+```list
+$ git config --list
+
+user.name=Your Name
+user.email=your_email@email.com
+color.status=auto
+color.branch=auto
+color.interactive=auto
+color.diff=auto
+...
+```
+
+You can also check what Git thinks a specific key's value is by typing `git config <key>`:
+
+```git
+$ git config user.name
+
+Your Name
+```
+
+## Getting Help
+
+You can use three ways to get the manual page (manpage) help for any of the Git commands:
+
+```git
+git help <verb>
+git <verb> --help
+man git-<verb>
+```
+
 ## Getting a Git Repository
 
 ### Initializing a Repository in an Existing Directory
