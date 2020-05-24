@@ -86,5 +86,43 @@ git clone https://github.com/libgit2/libgit2 mylibgit
 ### Checking the Status of Files
 
 ```git
-git status
+$ git status
+
+On branch master
+nothing to commit, working directory clean
 ```
+
+After creating new file `README.md`, if you run `git status`, you will get:
+
+```git
+$ git status
+
+On branch master
+Untracked files:
+ (use "git add <file>..." to include in what will be committed)
+ README
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+### Tracking New Files
+
+To begin tracking the `README.md` file, you can run this:
+
+```git
+git add README.md
+```
+
+After running this comman, when you run `git status` again, you will see:
+
+```git
+$ git status
+
+On branch master
+Changes to be committed:
+ (use "git reset HEAD <file>..." to unstage)
+ new file: README
+```
+
+> You can tell that it’s staged because it’s under the Changes to be committed heading.
+
+### Staging Modified Files
