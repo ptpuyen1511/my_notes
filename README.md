@@ -12,6 +12,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Basic Pandas](Python/Basic%20Pandas.md)
   * [Advanced Pandas](Python/Advanced%20Pandas.md)
   * [Dictionary](Python/Dictionary.md)
+  * [Tuple](Python/Tuple.md)
   * [Regex](Python/Regex.md)
   * [Python Debugger](Python/Python%20Debugger.md)
   * [10 hacks for Jupyter Notebook](Python/10%20hacks%20for%20Jupyter%20Notebook.md)
