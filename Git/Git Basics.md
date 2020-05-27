@@ -303,3 +303,27 @@ Here is another example of `.gitignore` file:
 build/    # ignore all files in the build/ directory
 doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt
 ```
+
+### Viewing Your Staged and Unstaged Changes
+
+To see what you’ve changed but not yet staged, type git diff with no other arguments:
+
+```git
+git diff
+```
+
+To see what you’ve staged that will go into your next commit, you can use:
+
+```git
+git diff --staged
+```
+
+This command compares your staged changes to your last commit.
+
+> It’s important to note that git diff by itself doesn’t show all changes made since your last commit—only changes that are still unstaged. This can be confusing, because if you’ve staged all your changes, git diff will give you no output.
+
+To see what you’ve staged so far:
+
+```git
+git diff -cached
+```
