@@ -333,7 +333,7 @@ git diff -cached
 To commit your change, you use:
 
 ```git
-git commit - "Your message"
+git commit -m "Your message"
 ```
 
 ### Skipping the Staging Area
