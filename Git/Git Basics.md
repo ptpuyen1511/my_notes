@@ -327,3 +327,65 @@ To see what you’ve staged so far:
 ```git
 git diff -cached
 ```
+
+### Committing Your Changes
+
+To commit your change, you use:
+
+```git
+git commit - "Your message"
+```
+
+### Skipping the Staging Area
+
+> Adding the `-a` option to the `git commit` command makes Git automatically stage every file that is already tracked before doing the commit, letting you skip the `git add` part:
+
+```git
+$ git status
+On branch master
+Changes not staged for commit:
+ (use "git add <file>..." to update what will be committed)
+ (use "git checkout -- <file>..." to discard changes in working directory)
+ 
+   modified: benchmarks.rb
+   
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ git commit -a -m "added new benchmarks"
+[master 83e38c7] added new benchmarks
+ 1 file changed, 5 insertions(+), 0 deletions(-)
+```
+
+### Removing Files
+
+> If you simply remove the file from your working directory, it shows up under the “Changed but not updated” (that is, unstaged) area of your `git status` output.
+
+> Then, if you run `git rm`, it stages the file’s removal:
+
+```git
+$ git rm grit.gemspec
+rm 'grit.gemspec'
+
+$ git status
+On branch master
+Changes to be committed:
+ (use "git reset HEAD <file>..." to unstage)
+ 
+   deleted: grit.gemspec
+```
+
+> **Another useful thing you may want to do is to keep the file in your working tree but remove it from your staging area. In other words, you may want to keep the file on your hard drive but not have Git track it anymore. This is particularly useful if you forgot to add something to your .gitignore file and accidentally added it, like a large log file or a bunch of .a compiled files. To do this, use the `--cached` option**
+
+```git
+git rm --cached README.md
+```
+
+> You can pass files, directories, and file-glob patterns to the git rm command. That means you can do things such as:
+
+```git
+# Remove all files that have the `.log`extension in the `log/`directory
+git rm log/\*.log
+
+# Remove all files that end with ~
+git rm \*~
+```
