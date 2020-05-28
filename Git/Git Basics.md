@@ -346,9 +346,9 @@ On branch master
 Changes not staged for commit:
  (use "git add <file>..." to update what will be committed)
  (use "git checkout -- <file>..." to discard changes in working directory)
- 
+
    modified: benchmarks.rb
-   
+
 no changes added to commit (use "git add" and/or "git commit -a")
 
 $ git commit -a -m "added new benchmarks"
@@ -359,7 +359,7 @@ $ git commit -a -m "added new benchmarks"
 ### Removing Files
 
 > If you simply remove the file from your working directory, it shows up under the “Changed but not updated” (that is, unstaged) area of your `git status` output.
-
+>
 > Then, if you run `git rm`, it stages the file’s removal:
 
 ```git
@@ -370,7 +370,7 @@ $ git status
 On branch master
 Changes to be committed:
  (use "git reset HEAD <file>..." to unstage)
- 
+
    deleted: grit.gemspec
 ```
 
@@ -389,3 +389,104 @@ git rm log/\*.log
 # Remove all files that end with ~
 git rm \*~
 ```
+
+### Moving Files (Rename Files)
+
+> Unlike many other VCS systems, Git doesn’t explicitly track file movement. If you rename a file in Git, no metadata is stored in Git that tells it you renamed the file
+
+If you want to rename a file in Git, you can run something like:
+
+```git
+git mv file_src file_dest
+```
+
+## Viewing the Commit History
+
+To look back to see what has happened:
+
+```git
+git log
+```
+
+To show the difference introduced in each commit (in `git log`), you use `-p` flag and `-2` (limits the output to only the last two entries):
+
+```git
+git log -p -2
+```
+
+To see some abbreviated stats for each
+commit, you can use the `--stat` option:
+
+```git
+git log --stat
+```
+
+To change the log output to formats other than the default:
+
+```git
+git log --pretty=oneline
+```
+
+In this, `oneline` option prints each commit on a single line, which is useful if you’re looking at a lot of commits. You can use other option, such as: `short`, `full`, and `fuller`.
+
+Or use `--pretty` with your format:
+
+```git
+
+$ git log --pretty=format:"%h - %an, %ar : %s"
+
+ca82a6d - Scott Chacon, 6 years ago : changed the version number
+085bb3b - Scott Chacon, 6 years ago : removed unnecessary test
+a11bef0 - Scott Chacon, 6 years ago : first commit
+```
+
+| Option        | Description of Output |
+|:------------- |:-------------         |
+| %H | Commit hash |
+|%h | Abbreviated commit hash
+|%T | Tree hash|
+|%t | Abbreviated tree hash|
+|%P | Parent hash|
+|%p | Abbreviated parent hash|
+|%an | Author name|
+|%ae | Author e-mail|
+|%ad | Author date (format respects the –date= option|
+|%ar | Author date, relative|
+|%cn | Committer name|
+|%ce | Committer e-mail|
+|%cd | Committer date|
+|%cr | Committer date, relative|
+|%s | Subject         |
+
+Table 2-1. Useful Options for git log --pretty=format
+
+The oneline and format options are particularly useful with another log option called `--graph`. This option adds a nice little ASCII graph showing your branch and merge history:
+
+```git
+$ git log --pretty=format:"%h %s" --graph
+
+* 2d3acf9 ignore errors from SIGCHLD on trap
+* 5e3ee11 Merge branch 'master' of git://github.com/dustin/grit
+|\
+| * 420eac9 Added a method for getting the current branch.
+* | 30e367c timeout code and tests
+* | 5a09431 add timeout protection to grit
+* | e1193f8 support for heads with slashes in them
+|/
+* d6016bc require time for xmlschema
+* 11d191e Merge branch 'defunkt' into local
+```
+
+| Option        | Description |
+|:------------- |:------------- |
+|-p | Show the patch introduced with each commit.|
+|--stat | Show statistics for files modified in each commit.|
+|--shortstat | Display only the changed/insertions/deletions line from the --stat command.|
+|--name-only | Show the list of files modified after the commit information.|
+|--name-status | Show the list of files affected with added/modified/deleted information as well.|
+|--abbrev-commit | Show only the first few characters of the SHA-1 checksum instead of all 40.|
+|--relative-date | Display the date in a relative format (for example, “2 weeks ago”) instead of using the full date format.|
+|--graph | Display an ASCII graph of the branch and merge history beside the log output.|
+|--pretty | Show commits in an alternate format. Options include oneline, short, full, fuller, and format (where you specify your own format).|
+
+### Limiting Log Output
