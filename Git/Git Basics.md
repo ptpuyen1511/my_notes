@@ -443,7 +443,7 @@ a11bef0 - Scott Chacon, 6 years ago : first commit
 | Option        | Description of Output |
 |:------------- |:-------------         |
 | %H | Commit hash |
-|%h | Abbreviated commit hash
+|%h | Abbreviated commit hash|
 |%T | Tree hash|
 |%t | Abbreviated tree hash|
 |%P | Parent hash|
@@ -490,3 +490,31 @@ $ git log --pretty=format:"%h %s" --graph
 |--pretty | Show commits in an alternate format. Options include oneline, short, full, fuller, and format (where you specify your own format).|
 
 ### Limiting Log Output
+
+```git
+git log --since=2.weeks
+```
+
+> This command works with lots of formats—you can specify a specific date like "2008-01-15", or a relative date such as "2 years 1 day 3 minutes ago". And you also use `--until` option like `since`.
+
+You also can filter the list to commits that match some search criteria, such as `--author` (filter on a specific author), `--grep` (search for keywords in the commit messages).
+
+If you want to specify both options (option 1 **AND** option 2), you have to add `--all-match` or the command will match commits with either (option 1 **OR** option 2).
+
+> Another really helpful filter is the -S option that takes a string and only shows the commits that introduced a change to the code that added or removed that string. For instance, if you wanted to find the last commit that added or removed a reference to a specific function, you could call:
+
+```git
+git log --Sfunction_name
+```
+
+| Option        | Description |
+|:------------- |:------------- |
+|-(n) Show only the last n commits
+|--since, --after | Limit the commits to those made after the specified date|
+|--until, --before | Limit the commits to those made before the specified date|
+|--author | Only show commits in which the author entry matches the specified string|
+|--committer | Only show commits in which the committer entry matches the specified string|
+|--grep | Only show commits with a commit message containing the string|
+|-S | Only show commits adding or removing code matching the string |
+
+Table 2-3. Options to Limit the output of git log
