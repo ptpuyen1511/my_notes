@@ -518,3 +518,41 @@ git log --Sfunction_name
 |-S | Only show commits adding or removing code matching the string |
 
 Table 2-3. Options to Limit the output of git log
+
+## Undoing Things
+
+```git
+git commit -amend
+```
+
+> This command takes your staging area and uses it for the commit. If you’ve made no changes since your last commit (for instance, you run this command immediately after your previous commit), then your snapshot will look exactly the same, and all you’ll change is your commit message.
+>
+> The same commit-message editor fires up, but it already contains the message of your previous commit. You can edit the message the same as always, but it overwrites your previous commit.
+>
+> As an example, if you commit and then realize you forgot to stage the changes in a file you wanted to add to this commit, you can do something like this:
+
+```git
+git commit -m 'initial commit'
+git add forgotten_file
+git commit --amend
+```
+
+### Unstaging a Staged File
+
+After typing `git add .` if you want to unstage one of all files, you can use:
+
+```git
+git reset HEAD file_name.txt
+```
+
+This command unstage the file_name.txt file.
+
+### Unmodifying a Modified File
+
+Let's say that after chaging your file, you relize that you don't want keep your changes in the file_name.txt. You can use the following command:
+
+```git
+git checkout -- file_name.txt
+```
+
+> **__Important__: It’s important to understand that git checkout -- [file] is a dangerous command. Any changes you made to that file are gone—you just copied another file over it. Don’t ever use this command unless you absolutely know that you don’t want the file.**
