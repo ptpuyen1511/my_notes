@@ -556,3 +556,67 @@ git checkout -- file_name.txt
 ```
 
 > **__Important__: It’s important to understand that git checkout -- [file] is a dangerous command. Any changes you made to that file are gone—you just copied another file over it. Don’t ever use this command unless you absolutely know that you don’t want the file.**
+
+## Working with Remotes
+
+### Showing Your Remotes
+
+```git
+$ git remote
+origin
+
+$ git remote -v
+origin https://github.com/ptpuyen1511/my_notes (fetch)
+origin https://github.com/ptpuyen1511/my_notes (push)
+```
+
+Using `-v` for shows you the URLs that Git has stored for the shortname to be used when reading and writing with several collaborations.
+
+### Adding Remote Repositories
+
+```git
+$ git remote
+origin
+
+$ git remote add new_remote https://github.com/new_user/my_notes
+
+$ git remote -v
+origin https://github.com/ptpuyen1511/my_notes (fetch)
+origin https://github.com/ptpuyen1511/my_notes (push)
+new_remote https://github.com/new_user/my_notes (fetch)
+new_remote https://github.com/new_user/my_notes (push)
+```
+
+### Fetching and Pulling from Your Remotes
+
+```git
+get fetch [remote-name]
+```
+
+> The command goes out to that remote project and pulls down all the data from that remote project that you don’t have yet. After you do this, you should have references to all the branches from that remote, which you can merge in or inspect at any time.
+
+### Pushing to Your Remotes
+
+```git
+git push [remote-name] [branch-name]
+```
+
+### Inspecting a Remote
+
+```git
+git remote show [remote-name]
+```
+
+### Removing and Renaming Remotes
+
+Renaming remotes:
+
+```git
+git remote rename [old-name] [new-name]
+```
+
+Removing remotes:
+
+```git
+git remote rm [remote-name]
+```
