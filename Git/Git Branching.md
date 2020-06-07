@@ -42,3 +42,43 @@ git checkout [other-branch]
 After run above command, HEAD will point to the `[other-branch]` branch.
 
 > **It’s important to note that when you switch branches in Git, files in your working directory will change. If you switch to an older branch, your working directory will be reverted to look like it did the last time you committed on that branch. If Git cannot do it cleanly, it will not let you switch at all.**
+
+## Basic Branching and Merging
+
+### Basic Branching
+
+To create a branch and switch to it at the same time, you can run `git checkout` command with `-b` switch (let's say iss53 is the new branch you want to create and switch to):
+
+```git
+git checkout -b iss53
+```
+
+This code is shorthand for:
+
+```git
+git branch iss53
+git checkout iss53
+```
+
+**This is an important point to remember: when you switch branches, Git resets your working directory to look like it did the last time you committed on that branch. It adds, removes, and modifies files automatically to make sure your working copy is what the branch looked like on your last commit to it.**
+
+After creating a brach and you want to merge this brach to the branch `master`, you use:
+
+```git
+# Let switch to master branch
+$ git checkout master
+
+$ git merge [branch-you-want-to-merge]
+# You maybe get something like:
+Updating f42c576..3a0874c
+Fast-forward
+ index.html | 2 ++
+ 1 file changed, 2 insertions(+)
+```
+
+After merging branch to `master`, you will delete branch:
+
+```git
+$ git branch -d [branch-you-want-to-delete]
+Deleted branch [branch-you-want-to-delete] (...)
+```
