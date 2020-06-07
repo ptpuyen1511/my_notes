@@ -41,7 +41,7 @@ git checkout [other-branch]
 
 After run above command, HEAD will point to the `[other-branch]` branch.
 
-> **It’s important to note that when you switch branches in Git, files in your working directory will change. If you switch to an older branch, your working directory will be reverted to look like it did the last time you committed on that branch. If Git cannot do it cleanly, it will not let you switch at all.**
+> **It's important to note that when you switch branches in Git, files in your working directory will change. If you switch to an older branch, your working directory will be reverted to look like it did the last time you committed on that branch. If Git cannot do it cleanly, it will not let you switch at all.**
 
 ## Basic Branching and Merging
 
@@ -62,7 +62,7 @@ git checkout iss53
 
 **This is an important point to remember: when you switch branches, Git resets your working directory to look like it did the last time you committed on that branch. It adds, removes, and modifies files automatically to make sure your working copy is what the branch looked like on your last commit to it.**
 
-After creating a brach and you want to merge this brach to the branch `master`, you use:
+After creating a brach and you want to merge this brach to the branch `master` (in case branch `master` is a direct ancestor of your branch), you use:
 
 ```git
 # Let switch to master branch
@@ -81,4 +81,120 @@ After merging branch to `master`, you will delete branch:
 ```git
 $ git branch -d [branch-you-want-to-delete]
 Deleted branch [branch-you-want-to-delete] (...)
+```
+
+### Basic Merging
+
+After merging, you will get something like:
+
+```git
+$ git checkout master
+Switched to branch 'master'
+$ git merge iss53
+Merge made by the 'recursive' strategy.
+README | 1 +
+1 file changed, 1 insertion(+)
+```
+
+**Merge made by the 'recursive' strategy.** You see that a litle bit different than above case in **Basic Branching**. Because the commit on the branch you're on isn't a direct ancestor of the branch you're merging in, Git has to do some work. In this case, Git does a simple three-way merge, using the two snapshots pointed to by the branch tips and the common ancestor of the two.
+
+![snapshot_in_merging](../image/git_branching_snapshot_in_merging.png)
+
+Above figure is about three snapshots used in a typical merge
+
+### Basic Merge Conflicts
+
+If having conflicts in your merging, Git won't be able to merge them cleanly. Let's say when you merge branch `iss53` and have conflicts, you maybe get something like:
+
+```git
+$ git merge iss53
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+> Git hasn't automatically created a new merge commit. It has puased the process while you resolve the conflict.
+>
+> If you want to see which files are unmerged at any point after a merge conflict, you can run `git status`:
+
+```git
+$ git status
+On branch master
+You have unmerged paths.
+ (fix conflicts and run "git commit")
+Unmerged paths:
+ (use "git add <file>..." to mark resolution)
+ both modified: index.html
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+> Anything that has merge conflicts and hasn't been resolved is listed as unmerged. Git adds standard conflict-resolution markers to the files that have conflicts, so you can open them manually and resolve those conflicts. Your file contains a section that looks something like this:
+
+```git
+<<<<<<< HEAD:index.html
+<div id="footer">contact : email.support@github.com</div>
+=======
+<div id="footer">
+ please contact us at support@github.com
+</div>
+>>>>>>>iss53:index.html
+```
+
+> This means the version in HEAD (your master branch, because that was what you had checked out when you ran your merge command) is the top part of that block (everything above the =======), while the version in your iss53 branch looks like everything in the bottom part. To resolve the conflict, you have to either choose one side or the other or merge the contents yourself. For instance, you might resolve this conflict by replacing the entire block with this:
+
+```git
+<div id="footer">
+please contact us at email.support@github.com
+</div>
+```
+
+> This resolution has a little of each section, and the <<<<<<<, =======, and >>>>>>>lines have been completely removed. After you've resolved each of these sections in each conflicted file, run git add on each file to mark it as resolved. Staging the file marks it as resolved in Git.
+>
+> If you want to use a graphical tool to resolve these issues, you can run git mergetool, which fires up an appropriate visual merge tool and walks you through the conflicts:
+
+```git
+$ git mergetool
+
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge
+araxis bc3 codecompare vimdiff emerge
+Merging:
+index.html
+Normal merge conflict for 'index.html':
+ {local}: modified file
+ {remote}: modified file
+Hit return to start merge resolution tool (opendiff):
+```
+
+> If you want to use a merge tool other than the default (Git chose opendiff in this case because the command was run on a Mac), you can see all the supported tools listed at the top after one of the following tools. Just type the name of the tool you'd rather use.
+
+After you exit the merge tool, Git asks you whether the merge was successful. If you tell the script that it was, it stages the file to mark it as resolved for you. You can run git status again to verify that all conflicts have been resolved:
+
+```git
+$ git status
+On branch master
+All conflicts fixed but you are still merging.
+ (use "git commit" to conclude merge)
+Changes to be committed:
+ modified: index.html
+If you're happy with that, and you verify that everything that had conflicts has been staged, you can type git
+commit to finalize the merge commit. The commit message by default looks something like this:
+Merge branch 'iss53'
+Conflicts:
+ index.html
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+# .git/MERGE_HEAD
+# and try again.
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+# modified: index.html
+#
 ```
