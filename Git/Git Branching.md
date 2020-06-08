@@ -198,3 +198,50 @@ Conflicts:
 # modified: index.html
 #
 ```
+
+## Branch Management
+
+The `git branch` command does more than just `create` and `delete` branches. If you run it with no arguments, you get a simple listing of your current branches:
+
+```git
+$ git branch
+    iss53
+*   master
+    testing
+```
+
+> Notice the * character that prefixes the master branch: it indicates the branch that you currently have checked out (i.e., the branch that HEAD points to).
+
+To see the last commit on each branch, you can run `git branch -v`:
+
+```git
+$ git branch -v
+    iss53   93b412c fix javascript issue
+*   master  7a98805 Merge branch 'iss53'
+    testing 782fd34 add scott to the author list in the readmes
+```
+
+To see which branches are already merged into the **branch you’re on**, you can run `git branch --merged`:
+
+```git
+$ git branch --merged
+    iss53
+*   master
+```
+
+To see all the branches that contain work you haven’t yet merged in, you can run `git branch --no-merged`:
+
+```git
+$ git branch --no-merged
+    testing
+```
+
+This shows your other branch. Because it contains work that isn’t merged in yet, trying to delete it with `git branch –d` will fail:
+
+```git
+$ git branch -d testing
+error: The branch 'testing' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D testing'.
+```
+
+So, if you still want to delete branch, you can force it with `-D`.
