@@ -143,3 +143,39 @@
 `Ctrl + r` - redo
 
 `.` - repeat last command
+
+## Marking text (visual mode)
+
+`v` - start visual mode, mark lines, then do a command (like y-yank)
+
+`Shift + v` - start linewise visual mode
+
+---
+
+`o` - move to other end of marked area
+
+`Ctrl + v` - start visual block mode
+
+`Shift + o` - move to other corner of block
+
+---
+
+`aw` - mark a word
+
+`ab` - a block with ()
+
+`a Shift + b` - a block with {}
+
+`at` - a block with <> tags
+
+`ib` - inner block with ()
+
+`i Shift + b` - inner block with {}
+
+`it` - inner block with <> tags
+
+---
+
+`<Ecs>` - exit visual mode
+
+Tips: Instead of `b` or `B`, can also use `(` or `{`.
