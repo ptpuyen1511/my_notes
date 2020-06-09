@@ -103,3 +103,43 @@
 ---
 
 `Esc` - exit insert mode
+
+## Editing
+
+`r` - replace single char
+
+`Shift + j` - join line below the current one with one space in between
+
+`g Shift + j` - join line below the current one without space in between
+
+`gwip` - reflow paragraph
+
+`g~` - switch case up to motion
+
+`gu` - change to lowercase up to motion
+
+`g Shift + u` - change to uppercase up to motion
+
+`cc` - change (replace) entire line
+
+`Shift + C` - change (replace) to the end of line
+
+`c$` - change (replace) to the end of line
+
+`ciw` - change (replace) entire word
+
+`cw` - change (replace) to the end of word
+
+`s` - delete char and substitute text
+
+`Shift + s` - delete line and substitute text (same as cc)
+
+`xp` - transpose two letters (delete and paste)
+
+`u` - undo
+
+`Shift + u` - restore (undo) last changed line
+
+`Ctrl + r` - redo
+
+`.` - repeat last command
