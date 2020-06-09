@@ -195,3 +195,16 @@ Tips: Instead of `b` or `B`, can also use `(` or `{`.
 `u` - change marked text to lowercase
 
 `U` - change marked text to uppercase
+
+## Registers
+
+`:reg` - show registers content
+
+`"xy` - yank into register x (ex: `"0y`)
+
+`"xp` - paste contents of register x (ex: `"0p`)
+
+`"+y` - yank into the system clipboard register
+
+`"+p` - paste from the system clipboard register
+
