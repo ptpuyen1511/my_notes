@@ -19,6 +19,9 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   
 * Linux Command
   * [Basic Linux Command](Linux%20Command/basic_linux_command.md)
+  
+* Vim
+  * [Vim Basic](Vim/vim_basic.md)
 
 * Git
   * [Git Basics](Git/Git%20Basics.md)
