@@ -220,13 +220,13 @@ Tips: Instead of `b` or `B`, can also use `(` or `{`.
 
 ---
 
-``0` - go to the position where Vim was previously exited
+`0 - go to the position where Vim was previously exited
 
-``"` - go to the position when last editing this file
+`" - go to the position when last editing this file
 
-``.` - go to the position of the last change in this file
+`. - go to the position of the last change in this file
 
-```` - go to the position before the last jump
+`` - go to the position before the last jump
 
 ---
 
