@@ -265,3 +265,35 @@ So, if you still want to delete branch, you can force it with `-D`.
 ### Topic Branches
 
 > Topic branches, however, are useful in porjects of any size. A topic branch is a short-lived branch that you create and use for a single particular feature or related work.
+
+## Remote Branches
+
+> Remote branches are references (pointers) to the state of branches in your remote repositories. They’re local branches that you can’t move; they’re moved automatically for you whenever you do any network communication. Remote branches act as bookmarks to remind you where the branches on your remote repositories were the last time you connected to them.
+>
+> They take the form (remote)/(branch). For instance, if you wanted to see what the master branch on your origin remote looked like as of the last time you communicated with it, you would check the origin/master branch. If you were working on an issue with a partner and they pushed up an iss53 branch, you might have your own local iss53 branch; but the branch on the server would point to the commit at origin/iss53.
+>
+> This may be a bit confusing, so let’s look at an example. Let’s say you have a Git server on your network at git.ourcompany.com. If you clone from this, Git’s clone command automatically names it origin for you, pulls down all its data, creates a pointer to where its master branch is, and names it origin/master locally. Git also gives you your own local master branch starting at the same place as origin’s master branch, so you have something to work from.
+>
+> **"Origin" is not special. Just like the branch name “master” does not have any special meaning in Git, neither does “origin”. While “master” is the default name for a starting branch when you run git init which is the only reason it’s widely used, “origin” is the default name for a remote when you run git clone . If you run git clone -o booyah instead, then you will have booyah/master as your default remote branch.**
+
+![server and local repo after cloning](../image/git_branching_server_local_repo.png)
+
+> If you do some work on your local master branch, and, in the meantime, someone else pushes to git.ourcompany.com and updates its master branch, then your histories move forward differently. Also, as long as you stay out of contact with your origin server, your origin/master pointer doesn’t move.
+
+![local and remote work can diverge](../image/git_branching_local_remote_work_can_diverge.png)
+
+> To synchronize your work, you run a git fetch origin command. This command looks up which server “origin” is (in this case, it’s git.ourcompany.com), fetches any data from it that you don’t yet have, and updates your local database, moving your origin/master pointer to its new, more up-to-date position.
+
+![git fetch updates your remote references](../image/git_branching_git_fetch_update_your_remote_references.png)
+
+### Pushing
+
+```git
+git push [remote] [branch]
+
+git push origin test_branching
+```
+
+When you push to server (global) repo, you need type your password for authentification.
+
+> **Don’t type your password every time. If you’re using an HTTPS URL to push over, the Git server will ask you for your username and password for authentication. By default it will prompt you on the terminal for this information so the server can tell if you’re allowed to push. If you don’t want to type it every single time you push, you can set up a “credential cache.” The simplest is just to keep it in memory for a few minutes, which you can easily set up by running `git config --global credential.helper cache`.**
