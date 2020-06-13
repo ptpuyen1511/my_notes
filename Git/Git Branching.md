@@ -245,3 +245,23 @@ If you are sure you want to delete it, run 'git branch -D testing'.
 ```
 
 So, if you still want to delete branch, you can force it with `-D`.
+
+## Braching Workflows
+
+### Long-Running Branches
+
+> Because Git uses a simple three-way merge, merging from one branch into another multiple times over a long period is generally easy to do. This means you can have several branches that are always open and that you use for different stages of your development cycle; you can merge regularly from some of them into others.
+>
+> Many Git developers have a workflow that embraces this approach, such as having only code that is entirely stable in their master branch—possibly only code that has been or will be released. They have another parallel branch named develop or next that they work from or use to test stability—it isn’t necessarily always stable, but whenever it gets to a stable state, it can be merged into master. It’s used to pull in topic branches (short-lived branches, like your earlier iss53 branch) when they’re ready, to make sure they pass all the tests and don’t introduce bugs.
+>
+> In reality, we’re talking about pointers moving up the line of commits you’re making. The stable branches are farther down the line in your commit history, and the bleeding-edge branches are farther up the history.
+
+![linear_view](../image/git_branching_linear_view.png)
+
+> It's generally easier to think about them as work silos, where sets of commits graduate to a more stable silo when they are fully tested
+
+![silo_view](../image/git_branching_silo_view.png)
+
+### Topic Branches
+
+> Topic branches, however, are useful in porjects of any size. A topic branch is a short-lived branch that you create and use for a single particular feature or related work.
