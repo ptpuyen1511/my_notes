@@ -297,3 +297,45 @@ git push origin test_branching
 When you push to server (global) repo, you need type your password for authentification.
 
 > **Don’t type your password every time. If you’re using an HTTPS URL to push over, the Git server will ask you for your username and password for authentication. By default it will prompt you on the terminal for this information so the server can tell if you’re allowed to push. If you don’t want to type it every single time you push, you can set up a “credential cache.” The simplest is just to keep it in memory for a few minutes, which you can easily set up by running `git config --global credential.helper cache`.**
+
+### Tracking Branches
+
+> When you clone a repository, it generally automatically creates a master branch that tracks origin/master. That’s why git push and git pull work out of the box with no other arguments. However, you can set up other tracking branches if you wish—ones that track branches on other remotes, or don’t track the master branch. The simple case is the example you just saw, running git checkout -b [branch] [remotename]/[branch]. This is a common enough operation that git provides the --track shorthand:
+
+```git
+$ git checkout --track origin/testing_branch
+
+Branch testing_branch set up to track remote branch testing_branch from origin.
+Switched to a new branch 'testing_branch'
+```
+
+> To set up a local branch with a different name than the remote branch, you can easily use the first version with a different local branch name:
+
+```git
+$ git checkout -b tb origin/testing_branch
+
+Branch tb set up to track remote branch testing_branch from origin.
+Switched to a new branch 'tb'
+```
+
+> If you already have a local branch and want to set it to a remote branch you just pulled down, or want to change the upstream branch you’re tracking, you can use the -u or --set-upstream-to option to git branch to explicitly set it at any time.
+
+```git
+$ git branch -u origin/testing_branch
+
+Branch testing_branch set up to track remote branch testing_branch from origin.
+```
+
+> **UPSTREAM SHORTHAND. When you have a tracking branch set up, you can reference it with the @{upstream} or @{u} shorthand. So if you’re on the master branch and it’s tracking origin/master , you can say something like git merge @{u} instead of git merge origin/master if you want.**
+
+If you want to see what tracking branches you have set up, you can use the -vv option to git branch:
+
+```git
+$ git branch -vv
+iss53       7e424c3 [origin/iss53: ahead 2] forgot the brackets
+master      1ae2a45 [origin/master] deploying index fix
+* serverfix f8674d9 [teamone/server-fix-good: ahead 3, behind 1] this should do it
+testing     5ea463a trying something new
+```
+
+If you want totally up to date ahead and behind numbers, you’ll need to fetch from all your remotes right before running this. You could do that like this: `$ git fetch --all`; `git branch -vv`.
