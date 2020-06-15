@@ -339,3 +339,19 @@ testing     5ea463a trying something new
 ```
 
 If you want totally up to date ahead and behind numbers, you’ll need to fetch from all your remotes right before running this. You could do that like this: `$ git fetch --all`; `git branch -vv`.
+
+### Pulling
+
+`git fetch`: fetch down all the changes on the server (**it will not modify your working directory**)
+
+`git pull`: `git fetch` $\to$ `git merge`
+
+### Delete Remote Branches
+
+You can delete a remote branch using `--delete` option to `git push`:
+
+```git
+git push origin --delete [branch-you-wanna-delete]
+```
+
+> Basically all this does is remove the pointer from the server. The Git server will generally keep the data there for a while until a garbage collection runs, so if it was accidentally deleted, it’s often easy to recover.
