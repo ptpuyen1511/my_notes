@@ -355,3 +355,36 @@ git push origin --delete [branch-you-wanna-delete]
 ```
 
 > Basically all this does is remove the pointer from the server. The Git server will generally keep the data there for a while until a garbage collection runs, so if it was accidentally deleted, it’s often easy to recover.
+
+## Rebasing
+
+### The Basic Rebase
+
+There is another way to integrate the branches, that is `git rebase`.
+
+> With the rebase command, you can take all the changes that were committed on one branch and replay them on another one.
+
+```git
+$ git checkout experiment
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Applying: added staged command
+```
+
+### More Interesting Rebases
+
+> Suppose you decide that you want to merge your client-side changes into your mainline for a release, but you want to hold off on the server-side changes until it’s tested further. You can take the changes on client that aren’t on server (C8 and C9) and replay them on your master branch by using the --onto option of git rebase:
+
+```git
+git rebase --onto master server client
+```
+
+> This basically says, “Check out the client branch, figure out the patches from the common ancestor of the client and server branches, and then replay them onto master.” It’s a bit complex, but the result is pretty cool.
+
+Let's say you decide to pull in your server branch as well. You can rebase the server branch onto the master
+branch without having to check it out first by running `git rebase [basebranch] [topicbranch]`—which checks out
+the topic branch (in this case, server) for you and replays it onto the base branch (master):
+
+```git
+git rebase master server
+```
