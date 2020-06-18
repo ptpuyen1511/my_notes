@@ -26,6 +26,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
 * Git
   * [Git Basics](Git/Git%20Basics.md)
   * [Git Branching](Git/Git%20Branching.md)
+  * [Distributed Git](Git/Distributed%20Git.md)
 
 * Paper
   * [How to read scientific papers](Paper/How%20To%20Read%20Scientific%20Papers.md)
