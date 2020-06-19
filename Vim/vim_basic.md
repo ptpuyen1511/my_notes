@@ -282,5 +282,25 @@ Tips: Instead of `b` or `B`, can also use `(` or `{`.
 
 `x` - delete (cut) character
 
+## Indent text
 
+`>>` - indent (move right) line one shiftwidth
+
+`<<` - de-indent (move left) line one shiftwidth
+
+`>%` - indent a block with () or {} (cursor on brace)
+
+`>ib` - indent inner block with ()
+
+`>at` - indent a block with <> tags
+
+`3==` - re-indent 3 lines
+
+`=%` - re-indent a block with () or {} (cursor on brace)
+
+`=i Shift+b` - re-indent inner block with {}
+
+`gg= Shift+g` - re-indent entire buffer
+
+`]p` - paste and adjust indent to current line
 
