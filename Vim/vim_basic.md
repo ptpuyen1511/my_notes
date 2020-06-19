@@ -298,7 +298,7 @@ Tips: Instead of `b` or `B`, can also use `(` or `{`.
 
 `=%` - re-indent a block with () or {} (cursor on brace)
 
-`=i Shift+b` - re-indent inner block with {}
+`=i Shift+b` - indent inner block with {}
 
 `gg= Shift+g` - re-indent entire buffer
 
