@@ -322,3 +322,23 @@ Tips: Instead of `b` or `B`, can also use `(` or `{`.
 
 `:wqa` - write (save) and quit on all tabs
 
+## Search and replace
+
+`/pattern` - search for pattern
+
+`?pattern` - search backward for pattern
+
+`\vpattern` - 'very magic' pattern: non-alphanumeric characters are interpreted as special regex symbols (no escaping needed)
+
+`n` - repeat search in same direction
+
+`Shift+n` - repeat search in opposite direction
+
+---
+
+`:%s/old/new/g` - replace all old with new throughout file
+
+`:%s/old/new/gc` - replace all old with new throughout file with confimations
+
+`:noh[lsearch]` - remove highlighting of search matches
+
