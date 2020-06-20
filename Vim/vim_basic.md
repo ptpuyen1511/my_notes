@@ -1,5 +1,9 @@
 # Basic Vim
 
+This is cheat sheet from https://vim.rtorr.com/
+
+I just customize for myself
+
 ## Cursor movement
 
 `h` - move left
@@ -303,4 +307,18 @@ Tips: Instead of `b` or `B`, can also use `(` or `{`.
 `gg= Shift+g` - re-indent entire buffer
 
 `]p` - paste and adjust indent to current line
+
+## Exiting
+
+`:w` - write (save) the file, but don't exit
+
+`:w !sudo tee %` - write out the current file using sudo
+
+`:wq` or `:x` or `Shift+z Shift+z` - write (save) and quit
+
+`:q` - quit (fails if there are unsaved changes)
+
+`:q!` or `Shift+z Shift+q` - quit and throw away unsaved changes
+
+`:wqa` - write (save) and quit on all tabs
 
