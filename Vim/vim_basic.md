@@ -353,3 +353,49 @@ Tips: Instead of `b` or `B`, can also use `(` or `{`.
 
 `:cope[n]` - open a windows containing the list of matches
 
+## Working with multiple files
+
+`:e[dit] file` - edit a file in a new buffer
+
+`:bn[next]` - go to the next buffer
+
+`:bp[revious]` - go to the previous buffer
+
+`:b#` - go to buffer by #
+
+`:b file` - go to a buffer by file
+
+`:ls` - list all open buffers
+
+---
+
+`:sp[lit] file` - open a file in new buffer and split windows
+
+`:vs[plit] file` - open a file in new buffer and vertically split windows
+
+`:vert[ical] ba[ll]` - edit all buffers as vertical windows
+
+`:tab ba[ll]` - edit all buffers as tabs
+
+---
+
+`Ctrl + ws` - split window
+
+`Ctrl + wv` - split window vertically
+
+`Ctrl + ww` - switch windows
+
+`Ctrl + wq` - quit a window
+
+`Ctrl + wx` - exchange current window with next one
+
+`Ctrl + w=` - make all windows equal height & width
+
+`Ctrl + wh` - move cursor to the left window (vertical split)
+
+`Ctrl + wl` - move cursor to the right window (vertical split)
+
+`Ctrl + wj` - move cursor to the window below (horizontal split)
+
+`Ctrl + wk` - move cursor to the window above (horizontal split)
+
