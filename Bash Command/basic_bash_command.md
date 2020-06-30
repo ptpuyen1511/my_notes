@@ -120,3 +120,25 @@ A soft link means "create a file tha should point to the original file", so if w
 
 `^r (Ctrl + r)` - search through history commands
 
+## Directory Trees, Disk Usage, and Processes
+
+`mkdir -p path/to/new/dir` - make all directories in the path if they don't already exit
+
+`tree` - visualise a directory by printing a nicely formatted direcotry tree, by default, it prints the entire tree structure
+
+`tree -L 2` - print 2 levels only
+
+`tree --prune` - hide empty directories in tree's output
+
+---
+
+`df` - show how much space is taken up by files for the disks or system
+
+`df -h` - show with "human-readable"
+
+`du` - show file space usage for a particular directory and its subdirectories
+
+`du -h --max-depth=1` - only show directories N levels down (or fewer)
+
+`ps` - show all of the user's currently-running process (aka. `jobs`)
+
