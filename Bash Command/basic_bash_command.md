@@ -142,3 +142,22 @@ A soft link means "create a file tha should point to the original file", so if w
 
 `ps` - show all of the user's currently-running process (aka. `jobs`)
 
+## Miscellaneous
+
+`passwd` - change account password
+
+`logout` - exits a shell you've logged in to (where you have a user account)
+
+`exit` - exits any kind of shell
+
+---
+
+`clear` - move the current terminal line to the top of the screen
+
+`*` - (glob, aka. Kleene Star, aka. wildcard) use for looking for files
+
+```bash
+ls my_notes/Python/*Pandas*
+
+# Match zero or more characters, like RegEx
+```
