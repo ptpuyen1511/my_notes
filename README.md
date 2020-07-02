@@ -9,25 +9,25 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
 ## List Notes in `Code` tab
 
 * Python
-  * [Basic Pandas](Python/Basic%20Pandas.md)
-  * [Advanced Pandas](Python/Advanced%20Pandas.md)
-  * [Dictionary](Python/Dictionary.md)
-  * [Tuple](Python/Tuple.md)
-  * [Regex](Python/Regex.md)
-  * [Python Debugger](Python/Python%20Debugger.md)
-  * [10 hacks for Jupyter Notebook](Python/10%20hacks%20for%20Jupyter%20Notebook.md)
+  * [Basic Pandas](python/basic_pandas.md)
+  * [Advanced Pandas](python/advanced_pandas.md)
+  * [Dictionary](python/dictionary.md)
+  * [Tuple](python/tuple.md)
+  * [Regex](python/regex.md)
+  * [Python Debugger](python/python_debugger.md)
+  * [10 hacks for Jupyter Notebook](python/10_hacks_for_jupyter_notebook.md)
   
-* Bash Command 
-  * [Basic Linux Command](Bash%20Command/basic_linux_command.md)
-  * [Basic Bash Command](Bash%20Command/basic_bash_command.md)
+* Bash Command
+  * [Basic Linux Command](bash_command/basic_linux_command.md)
+  * [Basic Bash Command](bash_command/basic_bash_command.md)
   
 * Vim
-  * [Vim Basic](Vim/vim_basic.md)
+  * [Vim Basic](vim/vim_basic.md)
 
 * Git
-  * [Git Basics](Git/Git%20Basics.md)
-  * [Git Branching](Git/Git%20Branching.md)
-  * [Distributed Git](Git/Distributed%20Git.md)
+  * [Git Basics](git/git_basics.md)
+  * [Git Branching](git/git_branching.md)
+  * [Distributed Git](git/distributed_git.md)
 
 * Paper
-  * [How to read scientific papers](Paper/How%20To%20Read%20Scientific%20Papers.md)
+  * [How to read scientific papers](paper/how_to_read_scientific_papers.md)
