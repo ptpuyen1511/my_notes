@@ -97,3 +97,115 @@ We can add line `echo "~/.bashrc loaded!" to the top of `~/.bashrc~ to display l
 **Note that `bash` scripts can `source` other scripts**
 
 **Note that there are also different shells. `bash` is just one kind of shell (the "Bourne Again Shell"). Other common ones include `zsh`, `csh`, `fish`, and more.**
+
+## Finding Things
+
+`whereis` - search for "possibly useful" files related to a particular command. It will attempt to return the location of the binary, source, and `man` page
+
+`which` - return the location of the binary
+
+`whatis` - print out the one-line description of a command from its `man` page
+
+**Note: `which` is useful for finding the "original version" of a command which may be hidden by an alias**
+
+---
+
+`locate` - find a file anywhere on the system by referring to a semi-regularly-updated cached list of files
+
+`find` - iterate through the file system to find the file we are looking for 
+
+```bash
+find ~/ -iname "test.py"
+```
+
+**Note: `located` is usually faster than the alternative, `find`**
+
+## Downloading Things
+
+`ping` - attempt to open a line of communication with a network host
+
+```bash
+ping google.com
+```
+
+`wget` - used to easily download a file from the Internet
+
+`curl` - can be used just like `wget` (don't forget the `--output` flag)
+
+```bash
+curl https://some-link --output file.abc
+```
+
+**Note: `curl` supports many more protocols and is more widely available than `wget`; `curl` can also send data (`wget` recieve only). `wget` can download files recursively, while `curl` cannot.**
+
+---
+
+`apt` - fantastic package management in Debian-descended Linux distro
+
+`dnf` - in Fedora
+
+`apt search` - search software
+
+`apt install` - install software
+
+`gunzip` - unzip file `.tar.gz`
+
+`tar` - extract and creat `.tar` file
+
+```bash
+tar -xf file.tar
+# -x for extract, -f to specify the file to "untar"
+
+tar -xcf file_new.tar folder_to_tar
+# -c for create
+```
+
+`gzip` - zip a file (also `.tar` file)
+
+```bash
+gzip -c test.py > zipped_file.gz
+```
+
+## Redirecting Input and Output
+
+`echo` - write text to stdout by default
+
+`|` - pipe operator, redirects the output of the left command to the input of the right command
+
+`>` - redirect output from stdout to a particular location
+
+`printf` - an improved `echo`, allowing formatting and escape sequences
+
+`<` - get input from a particular location, rather than stdin
+
+```bash
+$ sort < (printf "1\n3\n2")
+
+1
+2
+3
+```
+---
+
+`0` - standard input
+
+`1` - standard ouput
+
+`2` - standard error streams
+
+`>&1` - write to stdout
+
+`>&2` - write to stderr
+
+`1>/dev/null` - redirect stdout to `/dev/null`
+
+`2>/dev/null` - redirect stderr to `/dev/null`
+
+`&>/dev/null` - redirect both to `/dev/null`
+
+`tee` - send output to stdout adn any number of additional locations
+
+```bash
+echo "test" | tee file1 file2 file3
+```
+
