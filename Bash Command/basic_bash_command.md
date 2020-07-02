@@ -140,7 +140,7 @@ A soft link means "create a file tha should point to the original file", so if w
 
 `du -h --max-depth=1` - only show directories N levels down (or fewer)
 
-`ps` - show all of the user's currently-running process (aka. `jobs`)
+`ps` - show all of the user's currently-running process (`jobs` tells you about the jobs that the current shell is managing, `ps` tell you about all the processes running on the system [StackOveflow](https://stackoverflow.com/a/11305716/6678117))
 
 ## Miscellaneous
 
