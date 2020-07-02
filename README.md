@@ -22,7 +22,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Basic Bash Command](bash_command/basic_bash_command.md)
   
 * Vim
-  * [Vim Basic](vim/vim_basic.md)
+  * [Basic Vim](vim/basic_vim.md)
 
 * Git
   * [Git Basics](git/git_basics.md)
