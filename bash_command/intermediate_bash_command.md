@@ -179,7 +179,7 @@ gzip -c test.py > zipped_file.gz
 `<` - get input from a particular location, rather than stdin
 
 ```bash
-$ sort < (printf "1\n3\n2")
+$ sort <(printf "1\n3\n2")
 
 1
 2
