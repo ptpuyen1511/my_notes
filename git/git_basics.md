@@ -816,3 +816,12 @@ If  you want to run an external command, rather than a Git subcommand. In that c
 ```git
 git config --global alias.visual "!gitk"
 ```
+
+### Git Remove Tracked Files
+
+We can untrack files already added to git repo by the following command:
+
+```git
+git rm -r --cached file_name
+```
+
