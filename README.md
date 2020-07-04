@@ -21,6 +21,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Basic Linux Command](bash_command/basic_linux_command.md)
   * [Basic Bash Command](bash_command/basic_bash_command.md)
   * [Intermediate Bash Command](bash_command/intermediate_bash_command.md)  
+  * [Advanced Bash Command](bash_command/advanced_bash_command.md)
 
 * Vim
   * [Basic Vim](vim/basic_vim.md)
