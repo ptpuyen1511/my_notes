@@ -1,6 +1,6 @@
 # Intermediate Bash Command
 
-This is some intermediate bash command from https://dev.to/awwsmm/101-bash-commands-and-tips-for-beginners-to-experts-30je
+This is a note for some intermediate bash commands from https://dev.to/awwsmm/101-bash-commands-and-tips-for-beginners-to-experts-30je
 
 I just customize it for myself
 
