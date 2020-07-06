@@ -60,3 +60,31 @@ sudo chown other_user folder_or_file_wanna_change
 
 `chgrp` - change owner group
 
+## User and Group Management
+
+`users` - show all users currently logged in, if we wanna see all users (even those not logged in), check `/etc/passwd`
+
+`useradd` - add a user
+
+`userdel` - delete a user
+
+`usermod -l new_username old_username` - modify the username of a user
+
+`sudo passwd username` - change the password for a user
+
+`sudo chsh username` - change a shell for a user
+
+`sudo chfn username` - change the details for a user
+
+`adduser username sudo` or `usermod -aG sudo username` - add a user to the `sudo` group
+
+`sudo - other_user` or `sudo -u other_user zsh` - log in other user
+
+---
+
+`groups` - show all of the groups of which the current user is a member, if we wanna see all groups, check `/etc/group` but **DO NOT MODIFY** this file unless we know what we are doing
+
+`groupadd` - add a group
+
+`groupdel` - delete a group
+
