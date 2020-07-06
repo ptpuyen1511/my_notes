@@ -88,3 +88,125 @@ sudo chown other_user folder_or_file_wanna_change
 
 `groupdel` - delete a group
 
+## Text Processing
+
+`uniq` - print unique lines (default) or repeated lines
+
+`sort` - sort lines alphabetically / numerically
+
+`diff` - report which lines differ between two lines
+
+`cmp` - report which bytes differ between two files
+
+---
+
+`cut` - usually used to cut a line into sections on some delimiter (good for CSV processing). `-d` specifies the delimiter and `-f` specifies the field index to print (start with 1 for the first field)
+
+`sed` - commonly used to replace a string with another string in a file
+
+```bash
+sed 's/old_string/new_string' file
+# replace the first occurrence of the pattern in each line (default)
+
+sed 's/old_string/new_string/2' file
+# replace the second occurrence of the pattern in a line
+
+sed 's/old_string/new_string/g' file
+# replace all the occurrences of the string in the line
+
+sed 's/old_string/new_string/3g' file
+# replace from nth occurence to all occurrences in a line
+
+sed 's/\(\b[A-Z]\)/\(\1\)/g'
+# parenthesize first character of each word
+
+sed '3 s/old_string/new_string/' file
+# replace string on a specific line number
+
+sed 's/old_string/new_string/p' file
+# duplicate the replaced line. Print the replaced line twice on the terminal. If a line does not have the search pattern and is not replaced, the print that line only once
+
+sed -n 's/old_string/new_string/p' file
+# print only the replaced lines
+
+sed '1, 3 s/old_string/new_string/' file
+# replace string on a range of lines
+
+sed '2,$ s/old_string/new_string/' file
+# repalce from second line to the last line ($)
+
+##########
+
+sed '2d' file
+# delete second line in file
+
+sed '$d' file
+# delete a last line
+
+sed '3,6d' file
+# delete line from range x to y
+
+sed '12,$d' file
+# delete from 12th line to last line
+
+sed '/pattern/d' file
+# delete pattern matching line
+
+#########
+
+sed G file
+# insert one blank line after each line
+
+sed 'G;G' file
+# insert 2 blank lines after each line
+
+sed '/^$/d;G' file
+# delete blank lines and insert one blank line after each line
+
+sed '/pattern/{x;p;x;}' file
+# insert a blank line above every line which matches "pattern"
+
+sed '/pattern/G' file
+# insert a blank line below every line which matches "pattern"
+
+sed '/^$/d' file
+# delete blank lines
+
+sed -i '/^#/d;/^$/d' file
+# delete empty lines or those begins with "#"
+
+#########
+
+sed -n '2,5p' file
+# view a file from 2 to 5 range
+
+sed '2,4d' file
+# view entire file except the given range, same delete lines in range
+
+sed -n '4'p file
+# print 4th line of the file
+
+sed -n '4,6'p file
+# print lines from 4th line to 6th line
+
+sed -n '$'p file
+# print only the last line
+
+sed -n 'n,$'p file
+# print from nth line to end of file (last line)
+
+###########
+
+sed -n /pattern/p file
+# print the line only which matches the pattern
+
+sed -n '/pattern/,5p' file
+# print lines which matches the pattern from input to 5th line
+
+sed -n '1,/pattern/p' file
+# print lines from the 1st line up-to the line which matches the pattern
+
+sed -n '/learn/,+2p' file
+# print the lines which matches the pattern up-to the next xth lines
+```
+
