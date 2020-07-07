@@ -102,7 +102,7 @@ sudo chown other_user folder_or_file_wanna_change
 
 `cut` - usually used to cut a line into sections on some delimiter (good for CSV processing). `-d` specifies the delimiter and `-f` specifies the field index to print (start with 1 for the first field)
 
-`sed` - commonly used to replace a string with another string in a file
+`sed` - (stream editor) commonly used to replace a string with another string in a file
 
 ```bash
 sed 's/old_string/new_string' file
@@ -208,5 +208,74 @@ sed -n '1,/pattern/p' file
 
 sed -n '/learn/,+2p' file
 # print the lines which matches the pattern up-to the next xth lines
+```
+
+## Pattern Matching
+
+`grep` - `g`/`re`/`p` (search `g`lobally for a `r`egular `e`xpression and `p`rint it) $\to$ use for finding text in files. `grep` allows for `-E` use of extended regular expressions, `-F` matching any one of multiple strings at once, and `-r` recursively searching files within a directory.
+
+```bash
+grep [options] pattern [files]
+
+Options Description
+-c : This prints only a count of the lines that match a pattern
+-h : Display the matched lines, but do not display the filenames.
+-i : Ignores, case for matching
+-l : Displays list of a filenames only.
+-n : Display the matched lines and their line numbers.
+-v : This prints out all the lines that do not matches the pattern
+-e exp : Specifies expression with this option. Can use multiple times.
+-f file : Takes patterns from file, one per line.
+-E : Treats pattern as an extended regular expression (ERE)
+-w : Match whole word
+-o : Print only the matched parts of a matching line, with each such part on a separate output line.
+
+
+$grep -i "PAttern" file
+# case insensitve search
+
+$grep -c "pattern" file
+# display the count of number of matches
+
+$grep -l "pattern" *
+# display the file names that matches the pattern
+
+$grep -w "pattern" file
+# check for the whole words in a file
+
+$grep -o "pattern" file
+# display only the matched pattern
+
+$grep -n "pattern" file
+# show line number while displaying the output
+
+$grep -v "pattern" file
+# invert the pattern match
+
+$grep "^pattern" file
+# match the lines that start with pattern
+
+$grep "pattern$" file
+# matching the lines end with pattern
+
+$grep -e "pattern1" -e "pattern2" file
+# specify expression, can use multiple times
+
+$grep -f pattern.txt file
+# take pattern from file, one per line
+```
+
+Ref: [GeeksForGeeks](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
+
+`awk` - a pattern-matching language built around reading and manipulating delimited data files, like CSV files
+
+**As a rule of thumb, `grep` is good for finding strings and patterns in files, `sed` is good for one-to-one replacement of strings in files, and `awk` is good for extracting strings and patterns from files and analysing them.**
+
+```bash
+# Example
+$ printf "A 10\nB 20\nC 60" > file
+
+$ awk 'BEGIN {sum=0; count=0; OFS=" "} {sum+=$2; count++} END {print "Average:", sum/count}' file
+Average: 30
 ```
 
