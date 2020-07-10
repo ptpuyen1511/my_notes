@@ -279,3 +279,67 @@ $ awk 'BEGIN {sum=0; count=0; OFS=" "} {sum+=$2; count++} END {print "Average:",
 Average: 30
 ```
 
+## Copying Files Over `ssh`
+
+`ssh` - how Unix-based machines connect to each other over network
+
+```bash
+$ ssh -p <port> username@xxx.xxx.xxx.xxx
+
+Last login: ....
+```
+
+Using `exit` to logout
+
+`scp` - secure copy, use to copy file to other machine
+
+```bash
+scp -P <port> file username@xxx.xxx.xxx.xxx
+```
+
+`rsync` - a file-copying tool which minimises the amount of data copyied by looking for deltas (changes) between files. It can be performed over `ssh` as well
+
+## Long-Running Processes
+
+`nohup` - running the command with `nohup` insures that the command will not be hung up if the shell is closed or if the network connection fails
+
+`yes` - continually outputs "y" until it's killed
+
+`ps` - show a list of the current user's processes
+
+`kill -9 pid` - kill process (`-9` means SIGKILL $\to$ terminate immediately)
+
+---
+
+`cron` - provide an easy way of automating regular, scheduled tasks
+
+`crontab -e` - (opens a text editor) to edit your `cron`
+
+## Miscellaneous
+
+`pushd` and `popd` - maintain a directory stack
+
+`xdg-open` - opens file with the default application
+
+`xargs` - vectorise commands, running them over any number of arguments in a loop
+
+## Fun But Mostly Useless Things ;-)
+
+`w` is more detailed `who`, showing who's logged in and what they're doing
+
+`write` - send a message to a specific user
+
+`wall` - send message to every logged-in user
+
+`lynx` - fully-functional, text-based web browser
+
+---
+
+`nautilus` - initialise a GUI remote desktop session and open a file browser
+
+`date` - show the current date and time
+
+`cal` - show an ASCII calendar of this month with today's date higlighted
+
+`bc` - a basic arithmetic calculator (but we should use Python =)) )
+
