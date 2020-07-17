@@ -51,3 +51,8 @@ From [here](https://stackoverflow.com/a/31593712)
 >>> s.loc[:6]
 KeyError: 6
 ```
+
+## Numpy Indexing vs Pandas Indexing
+* Numpy indexing: a[[1,2], [4, 5]] return a[1,4], a[2,5]
+* Pandas indexing: df[[1,2], [4, 5]] return intersect of row 1,2 and column 4,5
+ 
