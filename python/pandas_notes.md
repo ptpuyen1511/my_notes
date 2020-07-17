@@ -52,6 +52,8 @@ From [here](https://stackoverflow.com/a/31593712)
 KeyError: 6
 ```
 
+Slicing in `loc` is inclued `start` and `end`
+
 ## Numpy Indexing vs Pandas Indexing
 * Numpy indexing: a[[1,2], [4, 5]] return a[1,4], a[2,5]
 * Pandas indexing: df[[1,2], [4, 5]] return intersect of row 1,2 and column 4,5
