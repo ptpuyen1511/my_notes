@@ -11,6 +11,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
 * Python
   * [Basic Pandas](python/basic_pandas.md)
   * [Advanced Pandas](python/advanced_pandas.md)
+  * [Pandas Notes](python/pandas_notes.md)
   * [Dictionary](python/dictionary.md)
   * [Tuple](python/tuple.md)
   * [Regex](python/regex.md)
