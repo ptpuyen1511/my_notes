@@ -58,3 +58,9 @@ Same copy but replace cp to mv
 
 ### WLS open file
 *`explorer.exe file_name`* (to open file with defaut app)
+
+### Diff
+`diff file1 file2` (compare 2 files)
+
+### Tac
+`tac file`(display file upside-down)
