@@ -17,6 +17,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Regex](python/regex.md)
   * [Python Debugger](python/python_debugger.md)
   * [10 hacks for Jupyter Notebook](python/10_hacks_for_jupyter_notebook.md)
+  * [String Representations](python/string_representations.md)
   
 * Bash Command
   * [Basic Linux Command](bash_command/basic_linux_command.md)
