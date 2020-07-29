@@ -106,6 +106,10 @@ I just customize for myself
 
 ---
 
+`:1,$d` - delete all lines in file
+
+---
+
 `Esc` - exit insert mode
 
 ## Editing
