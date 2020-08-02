@@ -1,6 +1,10 @@
 ## TL;DR
 This note collects some commands in Linux terminal
 
+
+## Ref
+[1](https://devhints.io/bash)
+
 ## Key Takeaways
 ### List file
 `ls -l` (list with details)
@@ -64,3 +68,109 @@ Same copy but replace cp to mv
 
 ### Tac
 `tac file`(display file upside-down)
+
+### String quotes
+```bash
+NAME="Uyen"
+echo "Hi $NAME" #=> Hi Uyen
+echo 'Hi $NAME' #=> Hi $NAME
+```
+
+### Shell execution
+```bash
+echo "I'm in $(pwd)"
+echo "I'm in `pwd`"
+
+# They are same
+```
+
+### Loops
+#### Basic for loop
+```bash
+for i in /etc/rc.*; do
+   echo i
+done
+```
+
+#### C-like for loop
+```bash
+for ((i = 0; i < 100; i++)); do
+    echo $i
+done
+```
+
+#### Ranges
+```bash
+for i in {1..5}; do
+    echo "Welcome $i"
+done
+
+# With step size
+for i in {5..50..5}; do
+    echo "Welcome $i"
+done
+```
+
+#### Reading lines
+```bash
+cat file.txt | while read line; do
+    echo $line
+done
+```
+
+#### Forever
+```bash
+while true; do
+    ...
+done
+```
+
+### Functions
+#### Defining functions
+```bash
+my_func() {
+    echo "hello $1"
+}
+
+# Same as above (alternate syntax)
+function my_func() {
+    echo "hello $1"
+}
+
+my_func "Uyen"
+```
+
+#### Return values
+```bash
+my_func() {
+    local my_res = 'some value'
+    echo $my_res
+}
+
+res="$(my_func)"
+```
+
+#### Raising errors
+```bash
+my_func() {
+    return 1
+}
+
+if my_func; then
+    echo "success"
+else
+    echo "failure"
+fi
+```
+
+#### Arguments
+`$#` - number of arguments
+
+`$*` - all arguments
+
+`$@` - all arguments, starting from first
+
+`$1` - first argument
+
+`$_` - last argument of the previous command
+
