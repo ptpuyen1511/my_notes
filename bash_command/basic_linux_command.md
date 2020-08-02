@@ -143,7 +143,7 @@ my_func "Uyen"
 #### Return values
 ```bash
 my_func() {
-    local my_res = 'some value'
+    local my_res='some value' # notice: no space between 2 sides of =
     echo $my_res
 }
 
