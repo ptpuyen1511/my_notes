@@ -20,3 +20,20 @@ This file contains unorganized notes about git
 
 `git push origin --delete <remote-branch-name>` - remove remote branch
 
+---
+
+`git clean -n` - show what will be deleted by using the `-n` option
+
+`git clean -f` - delete all untracked files
+
+`git clean -fd` - remove directories
+
+`git clean -fX` - remove ignored files
+
+`git clean -fx` - remove ignored files and non-ignored files
+
+`git clean -i` - get a quick overview of what is going to be deleted offering you the possibility to include/exclude the affected files
+
+[ref](https://stackoverflow.com/questions/61212/how-to-remove-local-untracked-files-from-the-current-git-working-tree)
+
+---
