@@ -25,6 +25,10 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Intermediate Bash Command](bash_command/intermediate_bash_command.md)  
   * [Advanced Bash Command](bash_command/advanced_bash_command.md)
 
+* Linux Tips
+  * [Install ZSH](linux_tips/install_zsh.md)
+  * [Install ibus-bamboo](linux_tips/install_ibus-bamboo.md)
+
 * Vim
   * [Basic Vim](vim/basic_vim.md)
 
