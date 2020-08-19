@@ -92,6 +92,12 @@ To kill a background process, using `kill idprocess` or `kill %N` where `N` is t
 
 `rm -rf` - remove a directory (-r = recursive and -f = force)
 
+
+Remove all sub directories with name is 'folder-name':
+```bash
+rm -rf `find -type d -name [folder-name]`
+```
+
 ## Moving and Copying Files, Making Links, Command History
 
 `mv` - moves / renames a file
