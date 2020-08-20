@@ -38,10 +38,20 @@ This note collects some commands in Linux terminal
 
 ### Remove
 `rm file_name` (remove file without ask)
+
 `rm -i file_name` (remove file with ask)
 --> Can change rm to rm -i by use `alias rm='rm -i'` (only in current section). If want to set alias as default, insert above command into `.bashrc` in /home/user
 
+`rmdir` (remove empty directory only)
+
 `rm -r folder_name` (`-r` means recursive)
+
+`rm -rf` (-r = recursive and -f = force)
+
+Remove all sub directories with name is 'folder-name':
+```bash
+rm -rf `find -type d -name [folder-name]`
+```
 
 ### Copy
 `cp file_source file_dest`
