@@ -13,6 +13,16 @@ This note collects some commands in Linux terminal
 
 `ls -sh | head -n3` (with `|` is pipeline operator)
 
+### Find file
+`locate [file-name]` (líst all path having file-name in) (faster than `find` in some cases)
+
+`find ~ -name '*.py'` (find all .py files in `/home`, we can replace `~ --> /` to find at root)
+`find / -name '*python*'` (find all files with the word *python* in the name)
+`find / -iname '*python*'` (same as above but case-insensitive)
+`find / -regex '.*python.*\|.*\.py'` (regex match, find both .py files and files with the word "python" in the name)
+
+Ref: [here](https://stackoverflow.com/a/5791657)
+
 ### View file
 `cat file_name`
 
