@@ -3,7 +3,7 @@ This note collects some commands in Linux terminal
 
 
 ## Ref
-[1](https://devhints.io/bash)
+[Ref for Loop part](https://devhints.io/bash)
 
 ## Key Takeaways
 ### List file
