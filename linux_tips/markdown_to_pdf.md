@@ -6,7 +6,9 @@ Some tutorial for convert Markdown to PDF.
 
 ## Keyword Takeaways
 
-### Dependencies
+### Using Pandoc
+
+#### Dependencies
 
 1. Ubuntu
 
@@ -18,7 +20,7 @@ Some tutorial for convert Markdown to PDF.
 
 - Update later
 
-### Command
+#### Command
 
 `pandoc -s -o [outfile].pdf [markdown-file].md`
 
@@ -30,4 +32,16 @@ Where:
 - `[outfile].pdf`: file output with PDF format
 
 - `[markdown-file].pdf`: file input with Markdown format
+
+### Using grip
+
+#### Dependencies
+
+`pip install grip`
+
+#### Command
+
+`grip [markdown-file].md`
+
+After browser renders markdown file, just use `print` to save pdf file.
 
