@@ -33,15 +33,29 @@ Where:
 
 - `[markdown-file].pdf`: file input with Markdown format
 
-### Using grip
+### Using grip and browser (the best to me)
 
 #### Dependencies
 
-`pip install grip`
+- Install Python
+
+- Install GRIP (Github README Instant Preview): `pip install grip`
 
 #### Command
 
-`grip [markdown-file].md`
+`grip [markdown-file].md --export [temp-file].html`
 
-After browser renders markdown file, just use `print` to save pdf file.
+`vim [temp-file].html`
 
+Delete this code block:
+
+```vim
+<h3>
+    <span class="octicon octicon-book"></span
+    [markdown-file].md
+</h3>
+```
+
+$\to$ Open with browser and use Print feature to save pdf. 
+
+**Note that: in `more settings`, make sure that `Background graphics` is checked**
