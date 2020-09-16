@@ -51,11 +51,11 @@ Delete this code block:
 
 ```vim
 <h3>
-    <span class="octicon octicon-book"></span
+    <span class="octicon octicon-book"></span>
     [markdown-file].md
 </h3>
 ```
 
-$\to$ Open with browser and use Print feature to save pdf. 
+<img src="https://latex.codecogs.com/gif.latex?\to" /> Open with browser and use Print feature to save pdf. 
 
 **Note that: in `more settings`, make sure that `Background graphics` is checked**
