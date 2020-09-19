@@ -381,6 +381,8 @@ Tips: Instead of `b` or `B`, can also use `(` or `{`.
 
 `:tab ba[ll]` - edit all buffers as tabs
 
+`vim -p file1 file2 file3` - open all file listed as tabs
+
 ---
 
 `Ctrl + ws` - split window
