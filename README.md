@@ -1,4 +1,4 @@
-# My notes
+#My notes
 
 ## TL;DR
 
@@ -41,7 +41,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Git Notes](git/git_notes.md)
 
 * Useful Scripts
-  * [Split PDF](useful_scripts/split_pdf.py)
+  * [Split PDF](useful_scripts/pdf_split.py)
 
 * Paper
   * [How to read scientific papers](paper/how_to_read_scientific_papers.md)
