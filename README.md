@@ -40,5 +40,8 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Distributed Git](git/distributed_git.md)
   * [Git Notes](git/git_notes.md)
 
+* Useful Scripts
+  * [Split PDF](useful_scripts/split_pdf.py)
+
 * Paper
   * [How to read scientific papers](paper/how_to_read_scientific_papers.md)
