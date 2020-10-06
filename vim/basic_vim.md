@@ -383,6 +383,10 @@ Tips: Instead of `b` or `B`, can also use `(` or `{`.
 
 `vim -p file1 file2 file3` - open all file listed as tabs
 
+`gt` - go to next tab
+
+`gT` - go to previous tab
+
 ---
 
 `Ctrl + ws` - split window
