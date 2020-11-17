@@ -9,6 +9,7 @@
 ### How to install
 
 - Install Nodejs: using `conda`
+- Install Yarn: using `curl --compressed -o- -L https://yarnpkg.com/install.sh | bash`
 - Install Vim Plug: via [link](https://github.com/junegunn/vim-plug)
 - Install coc.nvim: copy this code to `.vimrc`:
 
