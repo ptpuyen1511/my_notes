@@ -31,3 +31,13 @@ Then, call: `:PlugInstall` to install `coc.nvim`
 ```sh
 :CocInstall coc-python coc-clangd coc-highlight coc-markdownlint
 ```
+
+- Auto select first suggestion: add the following code to `.vimrc`:
+
+```bash
+ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+```
+
+
+
+
