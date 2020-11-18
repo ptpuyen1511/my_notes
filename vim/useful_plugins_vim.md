@@ -4,13 +4,14 @@
 
 ### Link to repo
 
-[click here](https://github.com/neoclide/coc.nvim)
+Click [here](https://github.com/neoclide/coc.nvim)
 
 ### How to install
 
 - Install Nodejs: using `conda`
 - Install Yarn: using `curl --compressed -o- -L https://yarnpkg.com/install.sh | bash`
-- Install Vim Plug: via [link](https://github.com/junegunn/vim-plug)
+- Install Vim Plug: using `curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
 - Install coc.nvim: copy this code to `.vimrc`:
 
 ```sh
