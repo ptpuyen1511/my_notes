@@ -1,4 +1,4 @@
-#My notes
+# My notes
 
 ## TL;DR
 
@@ -33,7 +33,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
 
 * Vim
   * [Basic Vim](vim/basic_vim.md)
-  * [Useful Plug Vim](vim/useful_plugins_vim.md)
+  * [Useful Plugs Vim](vim/useful_plugins_vim.md)
 
 * Git
   * [Git Basics](git/git_basics.md)
