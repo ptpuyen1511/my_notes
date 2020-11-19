@@ -545,6 +545,8 @@ After typing `git add .` if you want to unstage one of all files, you can use:
 git reset HEAD file_name.txt
 ```
 
+> From git version 2.25, we can use: `git restore --staged file_name.txt` for unstaging file.
+
 This command unstage the file_name.txt file.
 
 ### Unmodifying a Modified File
@@ -554,6 +556,7 @@ Let's say that after chaging your file, you relize that you don't want keep your
 ```git
 git checkout -- file_name.txt
 ```
+> From git version 2.25, we can use: `git restore file_name.txt` for unmodifying file.
 
 > **__Important__: It’s important to understand that git checkout -- [file] is a dangerous command. Any changes you made to that file are gone—you just copied another file over it. Don’t ever use this command unless you absolutely know that you don’t want the file.**
 
