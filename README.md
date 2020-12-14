@@ -45,6 +45,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Split PDF](useful_scripts/pdf_split.py)
   * [Get all files](useful_scripts/get_all_files.py)
   * [Auto unzip](useful_scripts/unzip_list_zipped_files.py)
+  * [Convert PDF page to image](useful_scripts/pdf2img.py)
 
 * Paper
   * [How to read scientific papers](paper/how_to_read_scientific_papers.md)
