@@ -8,7 +8,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
 
 ## List Notes in `Code` tab
 
-* Python
+* [Python](python/)
   * [Basic Pandas](python/basic_pandas.md)
   * [Advanced Pandas](python/advanced_pandas.md)
   * [Pandas Notes](python/pandas_notes.md)
@@ -19,33 +19,33 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [10 hacks for Jupyter Notebook](python/10_hacks_for_jupyter_notebook.md)
   * [String Representations](python/string_representations.md)
   
-* Bash Command
+* [Bash Command](bash_command/)
   * [Basic Linux Command](bash_command/basic_linux_command.md)
   * [Basic Bash Command](bash_command/basic_bash_command.md)
   * [Intermediate Bash Command](bash_command/intermediate_bash_command.md)  
   * [Advanced Bash Command](bash_command/advanced_bash_command.md)
 
-* Linux Tips
+* [Linux Tips](linux_tips/)
   * [Install ZSH](linux_tips/install_zsh.md)
   * [Install ibus-bamboo](linux_tips/install_ibus-bamboo.md)
   * [Check Hardware](linux_tips/check_hardware.md)
   * [Mardown to PDF](linux_tips/markdown_to_pdf.md)
 
-* Vim
+* [Vim](vim/)
   * [Basic Vim](vim/basic_vim.md)
   * [Useful Plugs Vim](vim/useful_plugins_vim.md)
 
-* Git
+* [Git](git/)
   * [Git Basics](git/git_basics.md)
   * [Git Branching](git/git_branching.md)
   * [Distributed Git](git/distributed_git.md)
   * [Git Notes](git/git_notes.md)
 
-* Useful Scripts
+* [Useful Scripts](useful_scripts/)
   * [Split PDF](useful_scripts/pdf_split.py)
   * [Get all files](useful_scripts/get_all_files.py)
   * [Auto unzip](useful_scripts/unzip_list_zipped_files.py)
   * [Convert PDF page to image](useful_scripts/pdf2img.py)
 
-* Paper
+* [Paper](paper/)
   * [How to read scientific papers](paper/how_to_read_scientific_papers.md)
