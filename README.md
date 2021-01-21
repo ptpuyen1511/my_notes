@@ -34,6 +34,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
 * [Vim](vim/)
   * [Basic Vim](vim/basic_vim.md)
   * [Useful Plugs Vim](vim/useful_plugins_vim.md)
+  * [Template vim_rc](vim/template_vimrc)
 
 * [Git](git/)
   * [Git Basics](git/git_basics.md)
