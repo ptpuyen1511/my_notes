@@ -30,6 +30,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Install ibus-bamboo](linux_tips/install_ibus-bamboo.md)
   * [Check Hardware](linux_tips/check_hardware.md)
   * [Mardown to PDF](linux_tips/markdown_to_pdf.md)
+  * [Dual booting time](linux_tips/wrong_time_win_linux.md)
 
 * [Vim](vim/)
   * [Basic Vim](vim/basic_vim.md)
