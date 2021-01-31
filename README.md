@@ -30,12 +30,12 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Install ibus-bamboo](linux_tips/install_ibus-bamboo.md)
   * [Check Hardware](linux_tips/check_hardware.md)
   * [Mardown to PDF](linux_tips/markdown_to_pdf.md)
-  * [Sync time dual boot](linux_tips/sync_time_win_linux.md)
+  * [Sync Time Dual Boot](linux_tips/sync_time_win_linux.md)
 
 * [Vim](vim/)
   * [Basic Vim](vim/basic_vim.md)
   * [Useful Plugs Vim](vim/useful_plugins_vim.md)
-  * [Template vim_rc](vim/template_vimrc)
+  * [Template `vimrc` File](vim/template_vimrc)
 
 * [Git](git/)
   * [Git Basics](git/git_basics.md)
