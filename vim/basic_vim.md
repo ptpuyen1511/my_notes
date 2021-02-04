@@ -212,7 +212,9 @@ Tips: Instead of `b` or `B`, can also use `(` or `{`.
 
 `"xp` - paste contents of register x (ex: `"0p`)
 
-`"+y` - yank into the system clipboard register
+`:%y+` - yank into the system clipboard register (requirement: 'vim-gtk') (no need visual mode)
+
+`"+y` - yank into the system clipboard register (requirement: 'vim-gtk') (need visual mode)
 
 `"+p` - paste from the system clipboard register
 
