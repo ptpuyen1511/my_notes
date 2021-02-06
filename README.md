@@ -29,7 +29,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Install ZSH](linux_tips/install_zsh.md)
   * [Install ibus-bamboo](linux_tips/install_ibus-bamboo.md)
   * [Check Hardware](linux_tips/check_hardware.md)
-  * [Mardown to PDF](linux_tips/markdown_to_pdf.md)
+  * [Convert Mardown to PDF](linux_tips/markdown_to_pdf.md)
   * [Sync Time Dual Boot](linux_tips/sync_time_win_linux.md)
 
 * [Vim](vim/)
@@ -45,9 +45,9 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
 
 * [Useful Scripts](useful_scripts/)
   * [Split PDF](useful_scripts/pdf_split.py)
-  * [Get all files](useful_scripts/get_all_files.py)
+  * [Get all files in a folder](useful_scripts/get_all_files.py)
   * [Auto unzip](useful_scripts/unzip_list_zipped_files.py)
-  * [Convert PDF page to image](useful_scripts/pdf2img.py)
+  * [Convert PDF pages to images](useful_scripts/pdf2img.py)
   * [Copy files](useful_scripts/copy_files.py)
 
 * [Paper](paper/)
