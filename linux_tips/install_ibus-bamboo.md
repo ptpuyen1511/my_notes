@@ -1,6 +1,6 @@
 
 
-## Ubuntu
+## Ubuntu / Linux Mint
 
 ```bash
 sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo

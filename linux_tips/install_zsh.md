@@ -2,9 +2,9 @@
 
 ## Install
 
-`sudo apt-get install zsh`
+* Ubuntu / Linux Mint: `sudo apt-get install zsh`
 
-`sudo dnf install zsh`
+* Fedora: `sudo dnf install zsh`
 
 
 ## Install Oh-my-zsh
@@ -38,9 +38,9 @@ Active plugins in `~/.zshrc`:
 
 ### Install
 
-`sudo apt-get install powerline fonts-powerline`
+* Ubuntu / Linux Mint: `sudo apt-get install powerline fonts-powerline`
 
-`sudo dnf install powerline fonts-powerline`
+* Fedora: `sudo dnf install powerline fonts-powerline`
 
 `pip install powerline-status`
 
