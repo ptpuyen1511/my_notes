@@ -19,7 +19,7 @@
 
 `free`
 
-`htop`
+`htop` (requirement: `sudo apt-get install htop`)
 
 `top`
  
