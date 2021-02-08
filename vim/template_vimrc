@@ -2,6 +2,7 @@
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set smartindent
 
 " Set line number ----------------------------------------------------
 set number relativenumber
