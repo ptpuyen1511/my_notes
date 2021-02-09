@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-This repo is used to store my notes which are taken while reading.
+This repo is used to store my notes which are taken while reading, learning and researching.
 
 Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick notes).
 
@@ -43,7 +43,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Distributed Git](git/distributed_git.md)
   * [Git Notes](git/git_notes.md)
 
-* [Useful Scripts](useful_scripts/)
+* [Useful Python Scripts](useful_scripts/)
   * [Split PDF](useful_scripts/pdf_split.py)
   * [Get all files in a folder](useful_scripts/get_all_files.py)
   * [Auto unzip](useful_scripts/unzip_list_zipped_files.py)
