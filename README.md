@@ -24,6 +24,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Basic Bash Command](bash_command/basic_bash_command.md)
   * [Intermediate Bash Command](bash_command/intermediate_bash_command.md)  
   * [Advanced Bash Command](bash_command/advanced_bash_command.md)
+  * [Zsh Command](bash_command/zsh_command.md)
 
 * [Linux Tips](linux_tips/)
   * [Install ZSH](linux_tips/install_zsh.md)
