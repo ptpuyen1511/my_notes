@@ -29,6 +29,10 @@ For example, I had a folder at `/home/user/Documents` and I used it frequently. 
 
 Extract plugin in Zsh can unzip all types of compressed files.
 
+```
+extract <file-name>
+```
+
 ### Globbiing
 
 * List everything in current directory as well as all subdirectories
