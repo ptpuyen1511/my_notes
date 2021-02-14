@@ -131,3 +131,19 @@ ls -lah **/*(.md-3)
 # s, m, h, d, w, and M for seconds, minutes, hours, days weeks and months
 ```
 
+### Easy Directory Navigation
+
+```
+dirs -v
+```
+
+See the history of directories I visited.
+
+```
+~<number>
+
+# number is id of directory in list directories in history
+```
+
+Switch directory quickly.
+
