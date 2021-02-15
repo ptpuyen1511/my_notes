@@ -6,6 +6,7 @@ This file contains some commands in zsh.
 
 ## Reference
 [Learn the basics of the ZSH shell](https://linuxconfig.org/learn-the-basics-of-the-zsh-shell)
+[Z-Shell Guide](http://zsh.sourceforge.net/Guide/zshguide.html)
 
 ## Contents
 
