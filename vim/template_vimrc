@@ -1,6 +1,7 @@
 " Set theme ----------------------------------------------------------
 set background=dark
-colorscheme delek
+colorscheme my-molokai-config
+" from https://github.com/ptkhai1203/my-vim/blob/main/my-molokai-config.vim
 
 " Set tabline --------------------------------------------------------
 set tabstop=4
