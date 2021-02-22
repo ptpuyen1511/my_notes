@@ -180,7 +180,7 @@ if &t_Co > 255
    hi MatchParen      ctermfg=233  ctermbg=208 cterm=bold
    hi ModeMsg         ctermfg=229
    hi MoreMsg         ctermfg=229
-   hi Operator        ctermfg=205
+   hi Operator        ctermfg=14
 
    " complete menu
    hi Pmenu           ctermfg=81  ctermbg=16
