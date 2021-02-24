@@ -37,6 +37,8 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Basic Vim](vim/basic_vim.md)
   * [Useful Plugs Vim](vim/useful_plugins_vim.md)
   * [Template `vimrc` File](vim/template_vimrc)
+  * [My modified colors folder](vim/colors)
+  * [My modified syntax](vim/syntax)
 
 * [Git](git/)
   * [Git Basics](git/git_basics.md)
