@@ -1,7 +1,7 @@
 " Set theme ----------------------------------------------------------
 set background=dark
-colorscheme my-molokai-config
-" from https://github.com/ptkhai1203/my-vim/blob/main/my-molokai-config.vim
+colorscheme modified-molokai
+  " Remind to create colors forlder in ~/.vim and copy modified-molokai.vim to it
 
 " Set tabline --------------------------------------------------------
 set tabstop=4
