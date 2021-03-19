@@ -149,3 +149,10 @@ See the history of directories I visited.
 
 Switch directory quickly.
 
+### Other Commands 
+
+1. `take <folder-name>`
+
+`take <folder-name> == mkdir <folder-name> && cd <folder-name>`
+
+
