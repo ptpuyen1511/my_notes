@@ -155,4 +155,9 @@ Switch directory quickly.
 
 `take <folder-name> == mkdir <folder-name> && cd <folder-name>`
 
+2. `web-search`
+
+`web-search google what is the weather today`, in which `web-search` for calling plugin, `google` for search engine and the rest for keywords.
+
+
 
