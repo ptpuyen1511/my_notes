@@ -385,6 +385,8 @@ Tips: Instead of `b` or `B`, can also use `(` or `{`.
 
 `vim -p file1 file2 file3` - open all file listed as tabs
 
+`:tab ter[minal]` or `:terminal` - open terminal as a tab (to go to terminal-normal mode: add `:tnoremap <Esc> <C-\><C-n>` to `vimrc` file)
+
 `gt` - go to next tab
 
 `gT` - go to previous tab
