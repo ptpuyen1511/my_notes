@@ -37,6 +37,11 @@ Then, call: `:PlugInstall` to install `coc.nvim`
 :CocInstall coc-python coc-clangd coc-highlight coc-markdownlint
 ```
 
+- Install clangd for Fedora:
+```sh
+sudo dnf install clang-tools-extra
+```
+
 - Auto select first suggestion: add the following code to `.vimrc`:
 
 ```bash
