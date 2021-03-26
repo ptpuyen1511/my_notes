@@ -42,12 +42,15 @@ Then, call: `:PlugInstall` to install `coc.nvim`
 sudo dnf install clang-tools-extra
 ```
 
+- Install clangd for Ubuntu/Mint:
+```sh
+sudo apt-get install clangd-11
+
+sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-11 100
+```
+
 - Auto select first suggestion: add the following code to `.vimrc`:
 
 ```bash
  inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 ```
-
-
-
-
