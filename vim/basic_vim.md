@@ -32,7 +32,17 @@ I just customize for myself
 
 `Shift + b` - jump backward to start word (contain punctuation)
 
+`t"` - jump to right before the next quotes
+
+`f"` - jump and land on the next quotes
+
 `%` - move to matching character (default supported pairs: '()', '{}', '[]')
+
+---
+
+`)` - move forward one sentence
+
+`}` - move forward one paragraph
 
 ---
 
