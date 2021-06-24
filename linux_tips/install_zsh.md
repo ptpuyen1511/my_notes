@@ -33,6 +33,33 @@ Active plugins in `~/.zshrc`:
 
 > Log out and log in to see the change
 
+## Change ZSH theme
+
+### Install [Pure](https://github.com/sindresorhus/pure)
+
+1. Install `nodejs`
+
+2. Run `sudo npm install --global pure-prompt --allow-root --unsafe-perm=true`
+
+3. Copy the following lines to `.zshrc` (after `source $ZSH/oh-my-zsh.sh`):
+
+```bash
+autoload -U promptinit; promptinit
+
+# optionally define some options
+PURE_CMD_MAX_EXEC_TIME=10
+
+# turn on git stash status
+zstyle :prompt:pure:git:stash show yes
+
+prompt pure
+```
+
+4. Install colortheme [Tomorrow Night Eighties](gnome-terminal-tomorrow-night-eighties-256.sh)
+
+5. Change `ZSH_THEME=""`
+
+---
 
 ## Vim Statusline
 
