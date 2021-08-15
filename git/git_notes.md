@@ -8,9 +8,7 @@ This file contains unorganized notes about git
 
 New update for personal access token Github
 
-`git config --global --unset user.name`
-
-`git config --global --unset user.password`
+Remove old stored password: `git config --global --unset credential.helper`.
 
 Try `git fetch` to update new username and password.
 
