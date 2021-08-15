@@ -6,6 +6,18 @@ This file contains unorganized notes about git
 
 ## Keynote Takeaways
 
+New update for personal access token Github
+
+`git config --global --unset user.name`
+
+`git config --global --unset user.password`
+
+Try `git fetch` to update new username and password.
+
+`git config --global credential.helper "cache --timeout=86400"` for store token in 1 day.
+
+---
+
 `git checkout --orphan <branchname>` - create new empty branch
 
 `git merge --allow-unrelated-histories branch1 branch2` - merge 2 branchs which are unrelated histories
