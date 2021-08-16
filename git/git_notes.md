@@ -8,11 +8,11 @@ This file contains unorganized notes about git
 
 New update for personal access token Github
 
-Remove old stored password: `git config --global --unset credential.helper`.
+Remove old stored password: `rm ~/.git-credentials`.
 
 Try `git fetch` to update new username and password.
 
-`git config --global credential.helper "cache --timeout=86400"` for store token in 1 day.
+`git config --global credential.helper store` for store token.
 
 ---
 
