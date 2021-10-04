@@ -83,3 +83,6 @@ set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusl
 set t_Co=256
 ```
 
+### No highlight folder
+Add `export LS_COLORS=$LS_COLORS:'ow=1;34:';` to `.zshrc`
+
