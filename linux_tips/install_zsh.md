@@ -84,5 +84,5 @@ set t_Co=256
 ```
 
 ### No highlight folder
-Add `export LS_COLORS=$LS_COLORS:'ow=1;34:';` to `.zshrc`
+Add `export LS_COLORS=$LS_COLORS:'ow=1;34:';` to `.zshrc` (for zsh) or `.bashrc` (for bash)
 
