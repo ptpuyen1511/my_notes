@@ -20,6 +20,6 @@ Reference: [ibus-bamboo from home:lamlng project](https://software.opensuse.org/
 
 ### Uninstall
 
-`sudo make uninstall`
+`dnf remove ibus-bamboo`
 
 `ibus restart`
