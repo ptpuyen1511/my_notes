@@ -10,21 +10,13 @@ ibus restart
 ```
 
 ## Fedora
-### Install the dependencies
+### Install
 
-`sudo dnf install make go libX11-devel libXtst-devel`
+`dnf config-manager --add-repo https://download.opensuse.org/repositories/home:lamlng/Fedora_33/home:lamlng.repo`
 
-### Download
+`dnf install ibus-bamboo`
 
-`git clone https://github.com/BambooEngine/ibus-bamboo.git`
-
-### Build and Install
-
-`cd ibus-bamboo`
-
-`sudo make install`
-
-`ibus restart`
+Reference: [ibus-bamboo from home:lamlng project](https://software.opensuse.org//download.html?project=home%3Alamlng&package=ibus-bamboo)
 
 ### Uninstall
 
