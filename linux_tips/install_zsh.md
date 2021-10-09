@@ -59,6 +59,9 @@ prompt pure
 
 5. Change `ZSH_THEME=""`
 
+6. No highlight folder
+Add `export LS_COLORS=$LS_COLORS:'ow=1;34:';` to `.zshrc` (for zsh) or `.bashrc` (for bash)
+
 ---
 
 ## Vim Statusline
@@ -82,7 +85,4 @@ set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set t_Co=256
 ```
-
-### No highlight folder
-Add `export LS_COLORS=$LS_COLORS:'ow=1;34:';` to `.zshrc` (for zsh) or `.bashrc` (for bash)
 
