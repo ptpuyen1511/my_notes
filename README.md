@@ -33,6 +33,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Convert Mardown to PDF](linux_tips/markdown_to_pdf.md)
   * [Sync Time Dual Boot](linux_tips/sync_time_win_linux.md)
   * [Fedora Notes](linux_tips/fedora_notes.md)
+  * [Windows Terminal Setting](linux_tips/winterminal_settings.json)
 
 * [Vim](vim/)
   * [Basic Vim](vim/basic_vim.md)
