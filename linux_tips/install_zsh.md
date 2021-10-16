@@ -60,7 +60,7 @@ prompt pure
 5. Change `ZSH_THEME=""`
 
 6. No highlight folder
-Add `export LS_COLORS=$LS_COLORS:'ow=1;34:';` to `.zshrc` (for zsh) or `.bashrc` (for bash)
+Add `export LS_COLORS=$LS_COLORS:'ow=01;34:';` to `.zshrc` (for zsh) or `.bashrc` (for bash)
 
 ---
 
