@@ -34,6 +34,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Sync Time Dual Boot](linux_tips/sync_time_win_linux.md)
   * [Fedora Notes](linux_tips/fedora_notes.md)
   * [Windows Terminal Setting](linux_tips/winterminal_settings.json)
+  * [Create Password for PDF](linux_tips/create_password_for_pdf.md)
 
 * [Vim](vim/)
   * [Basic Vim](vim/basic_vim.md)
