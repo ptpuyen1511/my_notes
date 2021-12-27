@@ -58,3 +58,6 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
 
 * [Paper](paper/)
   * [How to read scientific papers](paper/how_to_read_scientific_papers.md)
+
+* Quick Notes
+  * To reduce cache size of Intelli in VSCode, search `C_Cpp: Intelli Sense Cache Size` and edit to 1024
