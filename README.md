@@ -35,6 +35,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Fedora Notes](linux_tips/fedora_notes.md)
   * [Windows Terminal Setting](linux_tips/winterminal_settings.json)
   * [Create Password for PDF](linux_tips/create_password_for_pdf.md)
+  * [Extract and Merge PDF](linux_tips/extract_merge_pdf_file.md)
 
 * [Vim](vim/)
   * [Basic Vim](vim/basic_vim.md)
