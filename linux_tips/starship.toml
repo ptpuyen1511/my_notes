@@ -1,0 +1,32 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Timeout for commands executed by starship (in milliseconds).
+command_timeout = 1000
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character] 
+success_symbol = "[➜](bold green) "
+error_symbol = "[➜](bold red) "
+
+# Git config
+[git_status]
+conflicted = "[=](bold red)"
+ahead = "[⇡]${count}(bold blue)"
+behind = "[⇣]${count}(bold blue)"
+up_to_date = "[✓](bold green)"
+untracked = "[*](bold red)"
+staged = "[+](bold red)"
+modified = "[!](bold red)"
+renamed = "[»](bold red)"
+deleted = "[☓](bold red)"
+style = "bold white"
+
+# Disable the package module, hiding it from the prompt completely
+#[package]
+#disabled = true
+
+
