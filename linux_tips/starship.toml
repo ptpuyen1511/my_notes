@@ -3,6 +3,7 @@
 
 # Inserts a blank line between shell prompts
 add_newline = true
+command_timeout = 1000
 
 [username]
 show_always = true
@@ -13,7 +14,7 @@ format = "underwent [$duration](#5fafff)"
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character] # The name of the module we are configuring is "character"
-success_symbol = "[➜](bold cyan)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
+success_symbol = "[➜](bold cyan)" 
 error_symbol = "[➜](bold red)"
 
 [git_status]
