@@ -8,6 +8,9 @@ add_newline = true
 show_always = true
 style_user = "#ff87ff"
 
+[cmd_duration]
+format = "underwent [$duration](#5fafff)"
+
 # Replace the "❯" symbol in the prompt with "➜"
 [character] # The name of the module we are configuring is "character"
 success_symbol = "[➜](bold cyan)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
