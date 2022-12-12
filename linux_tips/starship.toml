@@ -5,19 +5,17 @@
 add_newline = true
 command_timeout = 1000
 
-#https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
-
 [username]
 show_always = true
 style_user = "#ff87ff"
 
 [cmd_duration]
-format = "underwent [$duration](#5fafff)"
+format = "took [$duration](#5fafff)"
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character] # The name of the module we are configuring is "character"
-success_symbol = "[➜](bold cyan)" 
-error_symbol = "[➜](bold red)"
+success_symbol = "[➜](bold green) " 
+error_symbol = "[➜](bold red) "
 
 [git_status]
 style = "#ffff87"
