@@ -1,0 +1,5 @@
+Use available font:
+data:text/html, <textarea style="font-family:Bradley Hand ITC; font-size:2em; font-weight:bold; width:100%; height:100%; border:none; outline:none; line-height:1.5; max-width:auto; margin:0 auto; padding:5rem;" autofocus placeholder="Hi Uyen, wanna note something?"/>
+
+Use Google font:
+data:text/html, <style>@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');</style> <textarea style="font-family:Caveat; font-weight:bold; font-size:2em; width:100%; height:100%; border:none; outline:none; line-height:1.5; max-width:auto; margin:0 auto; padding:5rem;" autofocus placeholder="Hi Uyen, wanna note something?"/>
