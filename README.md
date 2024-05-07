@@ -2,9 +2,9 @@
 
 ## TL;DR
 
-This repo is used to store my notes which are taken while reading, learning and researching.
+This repo is used to store my notes which are taken while reading, learning, and researching.
 
-Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick notes).
+In addition to the notes in `Code` tab, I have some notes in the `Issue` tab (they are quick notes).
 
 ## List Notes in `Code` tab
 
@@ -30,7 +30,7 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Install ZSH](linux_tips/install_zsh.md)
   * [Install ibus-bamboo](linux_tips/install_ibus-bamboo.md)
   * [Check Hardware](linux_tips/check_hardware.md)
-  * [Convert Mardown to PDF](linux_tips/markdown_to_pdf.md)
+  * [Convert Markdown to PDF](linux_tips/markdown_to_pdf.md)
   * [Sync Time Dual Boot](linux_tips/sync_time_win_linux.md)
   * [Fedora Notes](linux_tips/fedora_notes.md)
   * [Windows Terminal Setting](linux_tips/winterminal_settings.json)
@@ -50,15 +50,16 @@ Beside notes in `Code` tab, I have some notes in the `Issue` tab (they are quick
   * [Distributed Git](git/distributed_git.md)
   * [Git Notes](git/git_notes.md)
 
-* [Useful Python Scripts](useful_scripts/)
+* [Useful Scripts](useful_scripts/)
   * [Split PDF](useful_scripts/pdf_split.py)
   * [Get all files in a folder](useful_scripts/get_all_files.py)
   * [Auto unzip](useful_scripts/unzip_list_zipped_files.py)
   * [Convert PDF pages to images](useful_scripts/pdf2img.py)
   * [Copy files](useful_scripts/copy_files.py)
+  * [Open empty note using address bar](useful_scripts/open_note_address_bar.txt)
 
 * [Paper](paper/)
   * [How to read scientific papers](paper/how_to_read_scientific_papers.md)
 
 * Quick Notes
-  * To reduce cache size of Intelli in VSCode, search `C_Cpp: Intelli Sense Cache Size` and edit to 1024
+  * To reduce the cache size of Intelli in VSCode, search `C_Cpp: Intelli Sense Cache Size` and edit to 1024
