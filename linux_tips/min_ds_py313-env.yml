@@ -1,0 +1,20 @@
+# Created: Dec 23, 2024
+name: min_ds_py313-env
+channels:
+- conda-forge
+dependencies:
+- git
+- jupyterlab
+- jupyter_contrib_nbextensions
+- python=3.13
+- requests
+- requests-cache
+- beautifulsoup4
+- python-chromedriver-binary
+- matplotlib
+- numpy
+- pandas
+- openpyxl # Help pandas read excel files
+- scikit-learn
+- nbdime
+- seaborn
