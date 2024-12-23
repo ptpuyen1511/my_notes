@@ -46,10 +46,10 @@ Active plugins in `~/.zshrc`:
 ```bash
 autoload -U promptinit; promptinit
 
-# optionally define some options
+# Optionally define some options
 PURE_CMD_MAX_EXEC_TIME=10
 
-# turn on git stash status
+# Turn on git stash status
 zstyle :prompt:pure:git:stash show yes
 
 prompt pure
@@ -60,7 +60,7 @@ prompt pure
 5. Change `ZSH_THEME=""`
 
 6. No highlight folder
-Add `export LS_COLORS=$LS_COLORS:'ow=01;34:';` to `.zshrc` (for zsh) or `.bashrc` (for bash)
+Add `export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"` to `.zshrc` (for zsh) or `.bashrc` (for bash)
 
 ---
 
