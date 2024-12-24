@@ -62,3 +62,8 @@
     - Install environment:
         - [min_ds_py313-env.yml](linux_tips/min_ds_py313-env.yml)
         - `conda env create -f min_ds_py313-env.yml`
+     
+# Other packages
+- `qpdf`
+    - Install: `sudo add-apt-repository ppa:qpdf/qpdf` -> `sudo apt-get install qpdf`
+    - Usage: `qpdf --encrypt [readpass] [ownerpass] 256 -- [infile].pdf [outfile].pdf`
