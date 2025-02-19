@@ -75,13 +75,16 @@
         - `source /usr/share/doc/fzf/examples/key-bindings.zsh` (read from `apt show fzf`)
         - `source /usr/share/doc/fzf/examples/completion.zsh` (read from `apt show fzf`)
         - `export FZF_DEFAULT_OPTS='--height 70% --layout reverse --border'` (to set default display)
+        - Some aliases:
+            - `alias fdp="find . -type d | fzf --preview='tree -C {}'"` (fzf directory preview)
+            - `alias ffp="find . -type f | fzf --preview='batcat --theme=Dracula --style=numbers,grid --color=always {}'"` (fzf file preview)
     - Some commands to preview:
-        - `find . -name '*.md' | fzf --preview='batcat --style=numbers,grid --color=always {}'`
-        - `find . -type f | fzf --preview='batcat --style=numbers,grid --color=always {}'`
+        - `find . -name '*.md' | fzf --preview='batcat --theme=Dracula --style=numbers,grid --color=always {}'`
+        - `find . -type f | fzf --preview='batcat --theme=Dracula --style=numbers,grid --color=always {}'`
         - `find . -type d | fzf --preview='tree -C {}'`
     - Some useful commands:
         - `cd $(find . -type d | fzf --preview='tree -C {}')` (cd after previewing folders)
-        - `vim $(find . -type f | fzf --preview='batcat --style=numbers,grid --color=always {}')` (open vim after previewing files)
+        - `vim $(find . -type f | fzf --preview='batcat --theme=Dracula --style=numbers,grid --color=always {}')` (open vim after previewing files)
         - `cd **`
         - `vim **`
      
