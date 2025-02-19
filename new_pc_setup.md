@@ -67,3 +67,22 @@
 - `qpdf`
     - Install: `sudo add-apt-repository ppa:qpdf/qpdf` -> `sudo apt-get install qpdf`
     - Usage: `qpdf --encrypt [readpass] [ownerpass] 256 -- [infile].pdf [outfile].pdf`
+- `batcat`: `sudo apt-get install bat`
+- `tree`: `sudo apt-get install tree`
+- `fzf`
+    - Install: `sudo apt-get install fzf`
+    - Put the following commands into `.zshrc`:
+        - `source /usr/share/doc/fzf/examples/key-bindings.zsh` (read from `apt show fzf`)
+        - `source /usr/share/doc/fzf/examples/completion.zsh` (read from `apt show fzf`)
+        - `export FZF_DEFAULT_OPTS='--height 70% --layout reverse --border'` (to set default display)
+    - Some commands to preview:
+        - `find . -name '*.md' | fzf --preview='batcat --style=numbers,grid --color=always {}'`
+        - `find . -type f | fzf --preview='batcat --style=numbers,grid --color=always {}'`
+        - `find . -type d | fzf --preview='tree -C {}'`
+    - Some useful commands:
+        - `cd $(find . -type d | fzf --preview='tree -C {}')` (cd after previewing folders)
+        - `vim $(find . -type f | fzf --preview='batcat --style=numbers,grid --color=always {}')` (open vim after previewing files)
+        - `cd **`
+        - `vim **`
+     
+    
