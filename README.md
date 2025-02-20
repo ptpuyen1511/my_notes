@@ -57,6 +57,7 @@ In addition to the notes in `Code` tab, I have some notes in the `Issue` tab (th
   * [Convert PDF pages to images](useful_scripts/pdf2img.py)
   * [Copy files](useful_scripts/copy_files.py)
   * [Open empty note using address bar](useful_scripts/open_note_address_bar.txt)
+  * [Rename multi files](useful_scripts/rename_multi_files.sh)
 
 * [Paper](paper/)
   * [How to read scientific papers](paper/how_to_read_scientific_papers.md)
