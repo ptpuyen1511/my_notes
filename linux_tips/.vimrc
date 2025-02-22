@@ -14,21 +14,12 @@ set number relativenumber
 set nu rnu
 
 " Status line
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Helper functions
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Returns true if paste mode is enabled
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    endif
-    return ''
-endfunction
+" Install lightline:  git clone https://github.com/itchyny/lightline.vim ~/.vim/pack/plugins/start/lightline
 " Always show the status line
 set laststatus=2
-" Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-
+let g:lightline = {
+    \ 'colorscheme': 'wombat',
+    \ }
 
 " Set list to display the eol char ---
 " set list
