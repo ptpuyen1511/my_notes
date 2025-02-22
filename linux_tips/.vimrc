@@ -1,6 +1,7 @@
 " Set theme ---
 set background=dark
-colorscheme modified-molokai
+" colorscheme modified-molokai
+colorscheme peaksea
 
 " Set tabline ---
 set tabstop=4
@@ -11,6 +12,23 @@ set smartindent
 " Set line number ---
 set number relativenumber
 set nu rnu
+
+" Status line
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Helper functions
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Returns true if paste mode is enabled
+function! HasPaste()
+    if &paste
+        return 'PASTE MODE  '
+    endif
+    return ''
+endfunction
+" Always show the status line
+set laststatus=2
+" Format the status line
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+
 
 " Set list to display the eol char ---
 " set list
