@@ -104,6 +104,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cls="clear"
 alias rm="rm -i"
+alias lssbn="ls -ao -lh -c"
+alias lssbt="ls -ao -lh -ct"
+alias lssbs="ls -ao -lh -S" 
 
 # No highlight directors
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
@@ -128,3 +131,9 @@ unset __conda_setup
 # <<< conda initialize <<<
 # Remove (base) from prompt
 # PROMPT=$(echo $PROMPT | sed 's/(base) //')
+
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
+export FZF_DEFAULT_OPTS='--height 70% --layout reverse --border'
+alias fdp="find . -type d | fzf --preview='tree -C {}'" # fzf directory preview
+alias ffp="find . -type f | fzf --preview='batcat --theme=Dracula --style=numbers,grid --color=always {}'" # fzf file preview
