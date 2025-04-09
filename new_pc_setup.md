@@ -53,6 +53,7 @@
 - Sample [.vimrc](linux_tips/.vimrc)
 - Starship config ([starship.toml](linux_tips/starship.toml)) should be in `~/.config/`
 - Remove conda environment from prompt: `conda config --set changeps1 False`
+- To yank to clipboard WSL2: `sudo apt-get install vim-gtk`
 
 # Step 8: C/C++ and Python in WSL
 - C/C++:
