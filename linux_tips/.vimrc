@@ -34,7 +34,7 @@ let g:lightline = {
 " Recent versions of xterm (282 or above) also support
 " 5 -> blinking vertical bar
 " 6 -> solid vertical bar
-if &term =~ '^xterm'
+if &term =~ '^xterm' || &term =~ '^screen' || &term =~ '^tmux'
    " enter vim
    autocmd VimEnter * silent !echo -ne "\e[2 q"
    " normal mode
