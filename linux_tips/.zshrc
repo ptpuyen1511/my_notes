@@ -137,3 +137,27 @@ source /usr/share/doc/fzf/examples/completion.zsh
 export FZF_DEFAULT_OPTS='--height 70% --layout reverse --border'
 alias fdp="find . -type d | fzf --preview='tree -C {}'" # fzf directory preview
 alias ffp="find . -type f | fzf --preview='batcat --theme=Dracula --style=numbers,grid --color=always {}'" # fzf file preview
+
+# For tmux setting-----------------------------------------------------------------------
+# Function to set blinking underline cursor
+set_blinking_underline() {
+  printf '\e[3 q'
+}
+
+# Define tmux as a function that wraps the real tmux command
+tmux() {
+  # Run the real tmux command with all arguments
+  command tmux "$@"
+
+  # Set cursor after tmux exits/completes
+  set_blinking_underline
+}
+
+# Set cursor when already inside tmux
+if [[ -n "$TMUX" ]]; then
+  set_blinking_underline
+fi
+
+# Set cursor when shell starts
+set_blinking_underline
+#----------------------------------------------------------------------------------------
