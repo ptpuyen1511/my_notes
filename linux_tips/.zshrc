@@ -106,7 +106,8 @@ alias cls="clear"
 alias rm="rm -i"
 alias lssbn="ls -ao -lh -c"
 alias lssbt="ls -ao -lh -ct"
-alias lssbs="ls -ao -lh -S" 
+alias lssbs="ls -ao -lh -S"
+alias bcat="bat --theme=Dracula --style=numbers,grid --color=always"
 
 # No highlight directors
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
