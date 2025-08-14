@@ -138,6 +138,7 @@ source /usr/share/doc/fzf/examples/completion.zsh
 export FZF_DEFAULT_OPTS='--height 70% --layout reverse --border'
 alias fdp="find . -type d | fzf --preview='tree -C {}'" # fzf directory preview
 alias ffp="find . -type f | fzf --preview='batcat --theme=Dracula --style=numbers,grid --color=always {}'" # fzf file preview
+alias gitlf="git log --all --graph --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %C(green)(%cr) %C(bold blue)<%an>%Creset'"
 
 # For tmux setting-----------------------------------------------------------------------
 # Function to set blinking underline cursor
