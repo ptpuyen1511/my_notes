@@ -108,6 +108,7 @@ alias lssbn="ls -ao -lh -c"
 alias lssbt="ls -ao -lh -ct"
 alias lssbs="ls -ao -lh -S"
 alias bcat="bat --theme=Dracula --style=numbers,grid --color=always"
+alias dirsize="du -sh *(D) | sort -rh"
 
 # No highlight directors
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
