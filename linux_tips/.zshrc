@@ -141,6 +141,42 @@ alias fdp="find . -type d | fzf --preview='tree -C {}'" # fzf directory preview
 alias ffp="find . -type f | fzf --preview='batcat --theme=Dracula --style=numbers,grid --color=always {}'" # fzf file preview
 alias gitlf="git log --all --graph --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %C(green)(%cr) %C(bold blue)<%an>%Creset'"
 
+vf() {
+    local file
+    file=$(ffp)
+
+    if [[ -n "$file" ]]; then
+        vim "$file"
+    fi
+}
+
+nvf() {
+    local file
+    file=$(ffp)
+
+    if [[ -n "$file" ]]; then
+        nvim "$file"
+    fi
+}
+
+cdf() {
+    local folder
+    folder=$(fdp)
+
+    if [[ -n "$folder" ]]; then
+        cd "$folder"
+    fi
+}
+
+bcf() {
+    local file
+    file=$(ffp)
+
+    if [[ -n "$file" ]]; then
+        batcat --theme="Dracula" "$file"
+    fi
+}
+
 # For tmux setting-----------------------------------------------------------------------
 # Function to set blinking underline cursor
 set_blinking_underline() {
