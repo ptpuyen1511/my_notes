@@ -18,7 +18,16 @@ format = "took [$duration](#5fafff)"
 # success_symbol = "[➜ ](bold green) " 
 # error_symbol = "[➜ ](bold red) "
 
+# Git information
 [git_status]
 style = "#ffff87"
+
+[git_branch]
+format = "[$symbol$branch(:$remote_branch)]($style) "
+
+# Simple Python format
+[python]
+format = "([\\($virtualenv\\)]($style) )"
+style = "bold blue"
 
 # Disable the package module, hiding it from the prompt completely
