@@ -116,66 +116,48 @@ export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 # Activate starship
 eval "$(starship init zsh)"
 
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ptpuyen/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/ptpuyen/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/ptpuyen/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/ptpuyen/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-# Remove (base) from prompt
-# PROMPT=$(echo $PROMPT | sed 's/(base) //')
+alias gitlf="git log --all --graph --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %C(green)(%cr) %C(bold blue)<%an>%Creset'"
+alias ta="tmux new-session -As"
 
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 export FZF_DEFAULT_OPTS='--height 70% --layout reverse --border'
-alias fdp="find . -type d | fzf --preview='tree -C {}'" # fzf directory preview
-alias ffp="find . -type f | fzf --preview='batcat --theme=Dracula --style=numbers,grid --color=always {}' --preview-window=wrap" # fzf file preview
-alias gitlf="git log --all --graph --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %C(green)(%cr) %C(bold blue)<%an>%Creset'"
+export FZF_COMPLETION_OPTS="--preview '
+    if [ -d {} ]; then
+        tree -C {} 2>/dev/null || ls -F --color=always {}
+    else
+        batcat --theme=Dracula --style=numbers,grid --color=always {} 2>/dev/null || cat {}
+    fi'"
 
-vf() {
-    local file
-    file=$(ffp)
+fdp() {
+    find . -type d | fzf --preview='tree -C {}'
+}
 
-    if [[ -n "$file" ]]; then
-        vim "$file"
+ffp() {
+    find . -type f | fzf --preview='batcat --theme=Dracula --style=numbers,grid --color=always {}' --preview-window=wrap
+}
+
+# Helper function that picks a file/folder, clears the prompt, and populates the line
+_fzf_populate() {
+    local cmd="$1"
+    local picker="$2"
+    local target
+    target=$($picker)
+
+    if [[ -n "$target" ]]; then
+        # Moves cursor up 3 lines and erases down to overwrite the two-line prompt + 1 line empty
+        printf '\e[3A\e[0J'
+        print -z "$cmd ${(q)target}"
     fi
 }
 
-nvf() {
-    local file
-    file=$(ffp)
+nvf() { _fzf_populate "nvim"   ffp; }
+vf()  { _fzf_populate "vim"    ffp; }
+export BAT_THEME="Dracula"
+bcf() { _fzf_populate "batcat" ffp; }
+cdf() { _fzf_populate "cd"     fdp; }
 
-    if [[ -n "$file" ]]; then
-        nvim "$file"
-    fi
-}
 
-cdf() {
-    local folder
-    folder=$(fdp)
-
-    if [[ -n "$folder" ]]; then
-        cd "$folder"
-    fi
-}
-
-bcf() {
-    local file
-    file=$(ffp)
-
-    if [[ -n "$file" ]]; then
-        batcat --theme="Dracula" "$file"
-    fi
-}
 
 # For tmux setting-----------------------------------------------------------------------
 # Function to set blinking underline cursor
