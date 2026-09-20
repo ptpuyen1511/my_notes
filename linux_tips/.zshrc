@@ -122,6 +122,19 @@ alias ta="tmux new-session -As"
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 export FZF_DEFAULT_OPTS='--height 70% --layout reverse --border'
+export FZF_CTRL_T_COMMAND="find . \( -name .git -o -name .venv \) -prune -o -type f -print"
+export FZF_CTRL_T_OPTS="--preview '
+    if [ -d {} ]; then
+        tree -C {} 2>/dev/null || ls -F --color=always {}
+    else
+        batcat --theme=Dracula --style=numbers,grid --color=always {} 2>/dev/null || cat {}
+    fi'"
+_fzf_compgen_path() {
+    find "$1" \( -name .git -o -name .venv \) -prune -o -type f -print
+}
+_fzf_compgen_dir() {
+    find "$1" \( -name .git -o -name .venv \) -prune -o -type d -print
+}
 export FZF_COMPLETION_OPTS="--preview '
     if [ -d {} ]; then
         tree -C {} 2>/dev/null || ls -F --color=always {}
@@ -156,7 +169,6 @@ vf()  { _fzf_populate "vim"    ffp; }
 export BAT_THEME="Dracula"
 bcf() { _fzf_populate "batcat" ffp; }
 cdf() { _fzf_populate "cd"     fdp; }
-
 
 
 # For tmux setting-----------------------------------------------------------------------
