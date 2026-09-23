@@ -177,6 +177,10 @@ set_blinking_underline() {
   printf '\e[3 q'
 }
 
+# Hook it directly into Zsh's prompt rendering loop.
+# This fixes the cursor after exiting nvim, detaching tmux, or finishing copy-mode.
+precmd_functions+=(set_blinking_underline)
+
 # Define tmux as a function that wraps the real tmux command
 tmux() {
   # Run the real tmux command with all arguments
